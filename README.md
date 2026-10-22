@@ -53,7 +53,10 @@ GitHub에서 파일을 고치려면: 파일 클릭 → 연필 아이콘(✏️) 
 
 - **공지사항** `notices`: `{ "tag": "일정", "tagColor": "#FFB86B", "title": "제목", "detail": "장소 · 시간", "date": "11.15" }`
   - 태그 색: 예배 `#D4F36B` · 모임 `#7FD4FF` · 일정 `#FFB86B` · 준비물 `#7FD4FF` · 안내 `#C9C6BE`
-- **우리들의 이야기** `photos`: 사진을 `images/` 폴더에 올린 뒤 `{ "caption": "가을 수련회", "src": "images/2026-retreat.jpg" }`
+- **우리들의 이야기** `albums`: 앨범 하나에 사진 여러 장. 첫 사진이 표지가 됩니다.
+  1. `images/albums/` 안에 앨범 폴더를 만들고(예: `2026-fall-retreat`) 사진을 `01.jpg`, `02.jpg`… 로 올립니다. 같은 사진의 작은 버전을 `01-thumb.jpg`처럼 함께 올립니다. (Claude에게 사진을 보내면 크기 줄이기·위치 정보 지우기·작은 버전 만들기를 대신 해 줍니다.)
+  2. 페이지 맨 아래 `albums:` 목록 맨 위에 추가합니다.
+     `{ "title": "가을 수련회", "date": "2026.11.01", "folder": "images/albums/2026-fall-retreat", "photos": ["01.jpg", "02.jpg"] },`
 - **우리들의 추억영상** `videos`: `{ "title": "수련회 하이라이트", "url": "https://youtu.be/..." }`
 
 ## 공개 전 확인
