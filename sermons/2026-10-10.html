@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>왜 믿음이 다른가?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* Layout: 한 줄로 읽어 내려가는 설교 노트. 남색 띠(본문·기도) 사이에 밝은 카드, 가운데에 네 가지 땅 2×2 점검표 */
+  :root {
+    --bg: #EEF2F7;
+    --surface: #FFFFFF;
+    --soft: #E2E9F2;
+    --ink: #152238;
+    --muted: #4C5A72;
+    --line: #CDD7E4;
+    --band: #152238;
+    --band-ink: #F3F6FA;
+    --band-muted: #B9C3D6;
+    --accent: #7FD4FF;
+    --accent-ink: #0B5C86;
+    --soil: #8A6A48;
+    --sprout: #3E8B5A;
+    --font-display: 'Gowun Batang', 'Noto Serif KR', serif;
+    --font-body: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0E1626; --surface: #172338; --soft: #1E2D47; --ink: #E6ECF4; --muted: #A3B1C7; --line: #2C3D5A;
+      --band: #0A1220; --band-ink: #F3F6FA; --band-muted: #A9B6CC; --accent: #7FD4FF; --accent-ink: #9FDFFF;
+      --soil: #C9A27A; --sprout: #7DC79A; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E1626; --surface: #172338; --soft: #1E2D47; --ink: #E6ECF4; --muted: #A3B1C7; --line: #2C3D5A;
+    --band: #0A1220; --band-ink: #F3F6FA; --band-muted: #A9B6CC; --accent: #7FD4FF; --accent-ink: #9FDFFF;
+    --soil: #C9A27A; --sprout: #7DC79A; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.75; }
+  .wrap { max-width: 760px; margin: 0 auto; padding-inline: 20px; display: flex; flex-direction: column; gap: 20px; padding-block: 0 48px; }
+  h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.3; }
+  p { margin: 0; }
+  .label { font-size: 12px; font-weight: 700; letter-spacing: 2px; color: var(--accent-ink); }
+  .ref { font-size: 13px; color: var(--muted); }
+
+  .hero { background: var(--band); color: var(--band-ink); padding-block: 56px 48px; padding-inline: 20px; }
+  .hero-in { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+  .hero .label { color: var(--accent); }
+  .hero h1 { font-size: clamp(36px, 8vw, 56px); }
+  .hero .scripture { color: var(--accent); font-size: 15px; }
+  .hero .lead { color: var(--band-muted); font-size: 17px; max-width: 34em; margin-top: 8px; }
+  .seed-row { display: flex; gap: 8px; margin-top: 14px; }
+  .seed-row span { width: 10px; height: 14px; border-radius: 50%; background: var(--accent); opacity: .85; }
+
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 26px 26px; display: flex; flex-direction: column; gap: 12px; }
+  .card h2 { font-size: 22px; }
+  .scenes { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .scenes li { background: var(--soft); border-radius: 10px; padding: 12px 16px; }
+  .scenes b { color: var(--ink); }
+
+  .flow { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: step; }
+  .flow li { display: grid; grid-template-columns: 36px 1fr; gap: 14px; padding: 14px 0; border-top: 1px dashed var(--line); }
+  .flow li:first-child { border-top: none; }
+  .flow .n { width: 36px; height: 36px; border-radius: 50%; background: var(--ink); color: var(--surface); display: flex; align-items: center; justify-content: center; font-weight: 700; }
+  .flow .t { font-weight: 700; }
+  blockquote { margin: 0; padding: 14px 18px; background: var(--soft); border-radius: 10px; font-family: var(--font-display); font-size: 17px; }
+  blockquote cite { display: block; margin-top: 6px; font-family: var(--font-body); font-style: normal; font-size: 12px; color: var(--muted); }
+
+  .gap-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .gap-table th, .gap-table td { text-align: left; padding: 10px 12px; border-top: 1px solid var(--line); vertical-align: top; }
+  .gap-table th { font-size: 12px; letter-spacing: 1px; color: var(--muted); font-weight: 700; border-top: none; }
+  .gap-table td:last-child { color: var(--muted); }
+  .scroll { overflow-x: auto; }
+  .verdict { font-family: var(--font-display); font-weight: 700; font-size: 19px; }
+
+  .thesis { background: var(--band); color: var(--band-ink); border-radius: 16px; padding: 30px 28px; display: flex; flex-direction: column; gap: 10px; text-align: center; }
+  .thesis .label { color: var(--accent); }
+  .thesis p.big { font-family: var(--font-display); font-size: clamp(24px, 5vw, 32px); font-weight: 700; line-height: 1.4; }
+  .thesis .sub { color: var(--band-muted); font-size: 15px; }
+
+  .note { font-size: 15px; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; padding: 14px 18px; }
+  .note b { color: var(--ink); }
+
+  .soils-head { display: flex; flex-direction: column; gap: 6px; padding-top: 12px; }
+  .soils-head h2 { font-size: 26px; }
+  .soils { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+  .soil { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .soil.good { border: 2px solid var(--sprout); }
+  .soil-top { display: flex; align-items: center; gap: 14px; }
+  .soil svg { flex: none; width: 64px; height: 40px; }
+  .soil h3 { font-size: 22px; }
+  .soil .verse { font-size: 13px; color: var(--muted); }
+  .soil .desc { font-size: 15px; }
+  .soil .ask { margin-top: auto; padding-top: 10px; border-top: 1px dashed var(--line); font-size: 14px; color: var(--muted); }
+  .soil .ask b { color: var(--ink); }
+  .yield { display: flex; gap: 8px; flex-wrap: wrap; }
+  .yield span { font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: var(--soft); color: var(--sprout); font-variant-numeric: tabular-nums; }
+
+  .turn { background: var(--surface); border: 2px solid var(--accent); border-radius: 16px; padding: 26px; display: flex; flex-direction: column; gap: 14px; }
+  .turn h2 { font-size: 24px; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+  .fact { background: var(--soft); border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .fact b { font-size: 15px; }
+  .fact span { font-size: 14px; color: var(--muted); }
+
+  .quote-band { background: var(--band); color: var(--band-ink); border-radius: 16px; padding: 30px 28px; text-align: center; font-family: var(--font-display); font-size: clamp(19px, 4vw, 24px); font-weight: 700; line-height: 1.6; }
+  .quote-band small { display: block; margin-top: 10px; font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--accent); }
+
+  .prayer { background: var(--band); color: var(--band-ink); border-radius: 16px; padding: 30px 28px; display: flex; flex-direction: column; gap: 14px; }
+  .prayer .label { color: var(--accent); }
+  .prayer p { font-family: var(--font-display); font-size: 17px; line-height: 2; color: var(--band-ink); }
+
+  .picks { display: grid; gap: 10px; }
+  .pick { display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: start; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; cursor: pointer; background: var(--surface); }
+  .pick input { width: 20px; height: 20px; margin: 3px 0 0; accent-color: var(--accent-ink); cursor: pointer; }
+  .pick:has(input:checked) { border-color: var(--accent-ink); background: var(--soft); }
+  .pick b { display: block; font-size: 15px; }
+  .pick span { font-size: 14px; color: var(--muted); }
+  .mine { display: flex; flex-direction: column; gap: 6px; }
+  .mine label { font-size: 14px; font-weight: 700; }
+  .mine input { width: 100%; font: inherit; font-size: 15px; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+  .mine small { color: var(--muted); font-size: 12px; }
+  input:focus-visible, .pick:focus-within { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
+
+  .change { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .change div { background: var(--soft); border-radius: 12px; padding: 14px 8px; text-align: center; }
+  .change b { display: block; font-family: var(--font-display); font-size: 20px; }
+  .change span { font-size: 12px; color: var(--muted); }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags span { font-size: 13px; padding: 5px 14px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); color: var(--muted); }
+
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding-top: 20px; border-top: 1px solid var(--line); }
+  footer b { display: block; font-family: var(--font-display); font-size: 16px; color: var(--ink); }
+
+  @media (max-width: 480px) { .card, .turn, .soil, .thesis, .prayer, .quote-band { padding: 20px 18px; } .change b { font-size: 17px; } }
+</style>
+</head>
+<body>
+<div style="background:#0F1A2C;padding:12px 20px"><a href="../young-adult.html" style="color:#7FD4FF;font:500 14px/1.4 'Noto Sans KR',sans-serif;text-decoration:none">← 서산중앙성결교회 청년부</a></div>
+<header class="hero">
+  <div class="hero-in">
+    <p class="label">서산중앙성결교회 · 청년부 설교</p>
+    <h1>왜 믿음이 다른가?</h1>
+    <p class="scripture">마태복음 12:46–13:23</p>
+    <p class="lead">같은 시간에 예배하고, 같은 찬양을 부르고, 같은 설교를 듣습니다. 그런데 열매는 다릅니다. 씨는 같고, 씨가 떨어진 땅이 다르기 때문입니다.</p>
+    <div class="seed-row" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top: 28px">
+
+  <section class="card" aria-labelledby="q">
+    <p class="label">오늘의 질문</p>
+    <h2 id="q">같은 말씀인데, 왜 이렇게 다를까요?</h2>
+    <ul class="scenes">
+      <li><b>어떤 사람은</b> 말씀을 듣고 삶을 돌아봅니다. "이 습관을 고쳐야겠구나. 그 사람을 이제는 용서해야겠구나."</li>
+      <li><b>어떤 사람은</b> 예배당 문을 나서는 순간 들은 말씀을 잊어버립니다.</li>
+      <li><b>어떤 사람은</b> 예배 때 가슴이 뜨거워 다짐하지만, 월요일 아침 현실에 부딪히면 결심이 눈 녹듯 사라집니다.</li>
+      <li><b>어떤 사람은</b> 몸은 예배당에 있지만 진로 걱정, 취업 불안, 인정받고 싶은 마음이 가득해 말씀이 들어올 자리가 없습니다.</li>
+    </ul>
+  </section>
+
+  <section class="card" aria-labelledby="flow">
+    <p class="label">본문의 흐름</p>
+    <h2 id="flow">보고도 믿지 않는 세대에서, 씨 뿌리는 비유까지</h2>
+    <ol class="flow">
+      <li><span class="n">1</span><div><p class="t">표적을 구하는 "이 세대" · 12장</p><p>바리새인들은 예수님의 능력을 직접 보고도 표적을 보여 달라고 요구합니다.</p></div></li>
+      <li><span class="n">2</span><div><p class="t">누가 예수님의 가족인가 · 12:46–50</p>
+        <blockquote>누구든지 하늘에 계신 내 아버지의 뜻대로 하는 자가 내 형제요 자매요 어머니이니라<cite>마태복음 12:50</cite></blockquote>
+        <p style="margin-top:10px">예수님 곁에 있었다는 사실, 예수님을 안다는 사실만으로는 충분하지 않습니다. 아버지의 말씀을 듣고 그대로 사는 사람이 예수님의 가족입니다.</p></div></li>
+      <li><span class="n">3</span><div><p class="t">씨 뿌리는 비유 · 13:1–23</p><p>같은 말씀을 듣고도 왜 어떤 사람은 열매를 맺고 어떤 사람은 맺지 못하는지 풀어 주십니다.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="card" aria-labelledby="gap">
+    <p class="label">말씀을 듣는가, 소비하는가</p>
+    <h2 id="gap">아는 것과 사는 것 사이</h2>
+    <div class="scroll">
+      <table class="gap-table">
+        <thead><tr><th scope="col">머리로는</th><th scope="col">삶에서는</th></tr></thead>
+        <tbody>
+          <tr><td>용서해야 한다는 걸 압니다</td><td>상처 준 사람을 만나면 이를 악뭅니다</td></tr>
+          <tr><td>하나님이 인생을 인도하신다고 고백합니다</td><td>진로와 취업 앞에서 내 계산기부터 두드립니다</td></tr>
+          <tr><td>주일에는 하나님 뜻대로 살겠다고 합니다</td><td>월요일이 되면 다시 내 방식대로 삽니다</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="verdict">말씀은 들었는데 삶이 그대로라면, 우리는 말씀을 듣는 것이 아니라 '소비'하고 있는 것입니다.</p>
+    <p class="ref">모태신앙, 10년 넘은 교회 생활, 많은 성경 지식. 모두 귀하지만 믿음의 전부는 아닙니다.</p>
+  </section>
+
+  <section class="thesis" aria-label="핵심 메시지">
+    <p class="label">핵심 메시지</p>
+    <p class="big">씨는 같습니다.<br>땅이 다릅니다.</p>
+    <p class="sub">예수님은 이 씨를 "천국 말씀"이라고 하십니다(13:19). 말씀이 부족해서 열매가 없는 것이 아닙니다. 문제는 그 말씀을 받는 마음입니다.</p>
+  </section>
+
+  <p class="note"><b>먼저 기억할 것.</b> 네 가지 땅은 "나는 이런 유형"이라고 분류하라는 말씀이 아닙니다. 한 사람 안에 네 가지 땅이 다 있습니다. 신앙생활에서는 열려 있어도 진로 앞에서는 닫혀 있을 수 있습니다. 정죄하지 말고, 내 마음의 영역을 하나씩 점검해 보세요.</p>
+
+  <div class="soils-head">
+    <p class="label">마음 밭 점검</p>
+    <h2>네 가지 땅</h2>
+  </div>
+  <section class="soils" aria-label="네 가지 땅">
+    <article class="soil">
+      <div class="soil-top">
+        <svg viewBox="0 0 64 40" role="img" aria-label="굳은 길가"><rect x="0" y="26" width="64" height="10" rx="3" fill="var(--soil)"></rect><path d="M4 31h56" stroke="var(--surface)" stroke-width="1.5" stroke-dasharray="6 5"></path><ellipse cx="20" cy="23" rx="2.5" ry="3.5" fill="var(--accent-ink)"></ellipse><ellipse cx="42" cy="23" rx="2.5" ry="3.5" fill="var(--accent-ink)"></ellipse></svg>
+        <div><h3>길가</h3><p class="verse">마태복음 13:19</p></div>
+      </div>
+      <p class="desc">말씀을 들어도 깨닫지 못합니다. 굳은 땅이라 씨가 뿌리내릴 틈이 없습니다. "좋은 말씀이네" 하면서도 나를 향한 말씀으로 받지 않고, 오히려 그 말씀을 들어야 할 다른 사람을 떠올립니다.</p>
+      <p class="ask"><b>점검 ·</b> 오늘 말씀을 "나에게 하시는 말씀"으로 받았나요?</p>
+    </article>
+    <article class="soil">
+      <div class="soil-top">
+        <svg viewBox="0 0 64 40" role="img" aria-label="얕은 흙 아래 돌"><rect x="0" y="22" width="64" height="6" rx="2" fill="var(--soil)"></rect><ellipse cx="14" cy="33" rx="10" ry="5" fill="var(--muted)"></ellipse><ellipse cx="36" cy="34" rx="9" ry="4.5" fill="var(--muted)"></ellipse><ellipse cx="55" cy="33" rx="8" ry="5" fill="var(--muted)"></ellipse><path d="M32 22v-9" stroke="var(--sprout)" stroke-width="2"></path><path d="M32 15c-4-1-6-4-6-6 3 0 6 2 6 6z" fill="var(--sprout)"></path></svg>
+        <div><h3>돌밭</h3><p class="verse">마태복음 13:20–21</p></div>
+      </div>
+      <p class="desc">말씀을 즉시 기쁨으로 받고 은혜도 받습니다. 그런데 뿌리가 없습니다. 수련회에서 눈물로 다짐해도 작은 손해나 관계의 어려움 앞에서 쉽게 흔들립니다. 은혜를 받은 것과 믿음이 뿌리내린 것은 다릅니다.</p>
+      <p class="ask"><b>점검 ·</b> 감동이 지나간 뒤에도 붙들고 사는 말씀이 있나요?</p>
+    </article>
+    <article class="soil">
+      <div class="soil-top">
+        <svg viewBox="0 0 64 40" role="img" aria-label="가시덤불 사이의 싹"><rect x="0" y="28" width="64" height="8" rx="3" fill="var(--soil)"></rect><path d="M8 28l6-18 4 18M44 28l7-20 5 20M20 28l-4-10" stroke="var(--muted)" stroke-width="2" fill="none"></path><path d="M32 28v-8" stroke="var(--sprout)" stroke-width="2"></path><path d="M32 22c3-1 5-3 5-5-3 0-5 2-5 5z" fill="var(--sprout)"></path></svg>
+        <div><h3>가시떨기</h3><p class="verse">마태복음 13:22</p></div>
+      </div>
+      <p class="desc">말씀을 거부하지 않습니다. 예배하고, 기도하고, 성경도 읽습니다. 그런데 마음 한쪽에서 진로, 연애, 돈, 성공, 사람들의 평가가 자랍니다. 예수님은 이것을 세상의 염려와 재물의 유혹이라고 하십니다. 염려가 말씀보다 큰 자리를 차지하면 말씀이 숨 막혀 열매를 맺지 못합니다.</p>
+      <p class="ask"><b>점검 ·</b> 지금 말씀보다 더 큰 자리를 차지한 염려는 무엇인가요?</p>
+    </article>
+    <article class="soil good">
+      <div class="soil-top">
+        <svg viewBox="0 0 64 40" role="img" aria-label="열매 맺은 좋은 땅"><rect x="0" y="28" width="64" height="8" rx="3" fill="var(--soil)"></rect><g stroke="var(--sprout)" stroke-width="2"><path d="M14 28V12"></path><path d="M32 28V8"></path><path d="M50 28V14"></path></g><g fill="var(--sprout)"><circle cx="14" cy="10" r="3.5"></circle><circle cx="32" cy="6" r="4"></circle><circle cx="50" cy="12" r="3"></circle></g></svg>
+        <div><h3>좋은 땅</h3><p class="verse">마태복음 13:23</p></div>
+      </div>
+      <p class="desc">말씀을 듣고 깨닫는 사람입니다. 죄도 흔들림도 없는 완벽한 사람이 아닙니다. 말씀이 내 생각과 달라도 마음을 열고, 손해처럼 보여도 말씀을 선택합니다. 그렇게 말씀이 삶에 뿌리내릴 때 열매가 나타납니다.</p>
+      <div class="yield" aria-label="열매의 크기"><span>100배</span><span>60배</span><span>30배</span></div>
+      <p class="ask"><b>점검 ·</b> 말씀이 실제로 열매 맺고 있는 내 삶의 영역은 어디인가요?</p>
+    </article>
+  </section>
+
+  <section class="turn" aria-labelledby="turn">
+    <p class="label">비유의 주인공</p>
+    <h2 id="turn">"좋은 땅이 되어야지" 결심만으로는 부족합니다</h2>
+    <p>우리의 의지는 생각보다 약합니다. 그래서 이 비유의 주인공을 다시 보아야 합니다. 주인공은 땅이 아니라 씨를 뿌리는 분, 곧 예수님입니다(13:37).</p>
+    <div class="facts">
+      <div class="fact"><b>모든 땅에 뿌리십니다</b><span>길가에도, 돌밭에도, 가시떨기에도. 굳은 마음에도 끝까지 말씀을 뿌리십니다.</span></div>
+      <div class="fact"><b>깨달음은 선물입니다</b><span>"천국의 비밀을 아는 것이 너희에게는 허락되었다" (13:11). 똑똑해서 얻는 것이 아닙니다.</span></div>
+      <div class="fact"><b>마음을 갈아엎으십니다</b><span>굳은 마음을 제거하고 부드러운 마음을 주시겠다고 약속하셨습니다 (겔 36:26).</span></div>
+    </div>
+    <p>우리가 좋은 땅이 되어서 예수님께 가는 것이 아닙니다. 예수님이 우리의 죄를 대신 지고 십자가에서 죽으시고, 다시 살아나셔서 우리를 하나님께로 인도하셨습니다. 믿음을 자라게 하시는 분도, 열매를 맺게 하시는 분도 하나님이십니다.</p>
+  </section>
+
+  <p class="quote-band">우리가 할 일은 단 하나입니다.<br>말씀 앞에서 마음을 닫지 않는 것입니다.<small>「왜 믿음이 다른가?」 설교 중에서</small></p>
+
+  <section class="prayer" aria-labelledby="pray">
+    <p class="label" id="pray">정직한 기도</p>
+    <p>주님, 제 마음이 길가처럼 굳어 있습니다.<br>저를 불쌍히 여겨 주십시오.<br>얕은 제 믿음에 뿌리를 내려 주십시오.<br><br>진로와 취업의 염려가 가시떨기처럼 제 마음을 덮고 있습니다.<br>이 염려를 거두시고 주님을 신뢰하게 해 주십시오.<br><br>제가 듣고 싶은 말씀만 듣지 않게 해 주십시오.<br>주님, 말씀해 주십시오. 제가 듣겠습니다.<br>그리고 그 말씀대로 살겠습니다.</p>
+  </section>
+
+  <section class="card" aria-labelledby="one">
+    <p class="label">이번 주 딱 한 가지</p>
+    <h2 id="one">들은 말씀 하나를 월요일 아침의 행동 하나로</h2>
+    <div class="picks" role="group" aria-label="이번 주 실천 고르기">
+      <label class="pick" for="p1"><input type="checkbox" id="p1"><div><b>용서가 어렵다면</b><span>그 사람의 이름을 부르며 기도해 봅니다.</span></div></label>
+      <label class="pick" for="p2"><input type="checkbox" id="p2"><div><b>진로가 두렵다면</b><span>계산하기 전에 먼저 이 일을 하나님 앞에 올려놓고 기도하는 시간을 갖습니다.</span></div></label>
+      <label class="pick" for="p3"><input type="checkbox" id="p3"><div><b>말씀을 남의 일로 들었다면</b><span>"하나님, 이 말씀이 나에게 하시는 말씀입니다" 한 문장을 적어 휴대폰 첫 화면에 둡니다.</span></div></label>
+    </div>
+    <div class="mine">
+      <label for="mine">나의 월요일 한 가지</label>
+      <input id="mine" type="text" maxlength="80" placeholder="예: 출근 전 5분, 오늘 말씀 한 구절 다시 읽기">
+      <small>적은 내용과 체크는 이 기기에만 저장됩니다.</small>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="ear">
+    <p class="label">들을 귀 있는 자는 들으라 · 13:9</p>
+    <h2 id="ear">갈림길마다 기준이 말씀이기를</h2>
+    <p>청년의 시기는 선택의 연속입니다. 어떤 길을 갈지, 누구와 관계 맺을지, 어떤 가치관으로 살지. 그 모든 갈림길에서 기준이 세상의 불안한 소리가 아니라 하나님의 변함없는 말씀이기를 바랍니다.</p>
+    <div class="change">
+      <div><b>생각</b><span>을 바꾸는 말씀</span></div>
+      <div><b>선택</b><span>을 바꾸는 말씀</span></div>
+      <div><b>삶</b><span>을 바꾸는 말씀</span></div>
+    </div>
+  </section>
+
+  <div class="tags" aria-label="핵심 키워드">
+    <span>#씨 뿌리는 비유</span><span>#같은 씨 다른 땅</span><span>#말씀 소비</span><span>#가시떨기</span><span>#깨달음은 선물</span><span>#마음 밭 점검</span><span>#월요일 한 가지</span>
+  </div>
+
+  <footer><b>서산중앙성결교회 청년부</b>왜 믿음이 다른가? · 마태복음 12:46–13:23</footer>
+</main>
+
+<script>
+  (function () {
+    var KEY = 'seosan-ya-sermon-mat13';
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { saved = {}; }
+    function save() { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} }
+    ['p1', 'p2', 'p3'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (saved[id]) el.checked = true;
+      el.addEventListener('change', function () { saved[id] = el.checked; save(); });
+    });
+    var mine = document.getElementById('mine');
+    if (saved.mine) mine.value = saved.mine;
+    mine.addEventListener('input', function () { saved.mine = mine.value; save(); });
+  })();
+</script>
+</body>
+</html>

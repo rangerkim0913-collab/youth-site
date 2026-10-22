@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>서산중앙성결교회 청년부</title>
+<meta name="description" content="그리스도 안에 뿌리내리고, 함께 성장하다. 매주 토요일 오후 6:00 교육관 1층">
+<meta property="og:title" content="서산중앙성결교회 청년부">
+<meta property="og:description" content="그리스도 안에 뿌리내리고, 함께 성장하다. 매주 토요일 오후 6:00 교육관 1층">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#152238">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='6' fill='%2310131F'/%3E%3Crect x='12' y='4' width='4' height='20' fill='%23D4F36B'/%3E%3Crect x='6' y='9' width='16' height='4' fill='%23D4F36B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&amp;family=IBM+Plex+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--accent:#7FD4FF;--line:#2E4366}
+html{scroll-behavior:smooth}
+body{margin:0;background:#152238}
+a{color:#A9E2FF}a:hover{color:#FFFFFF}
+[hidden]{display:none!important}
+section[id],div[id],button[id]{scroll-margin-top:16px}
+summary{list-style:none}summary::-webkit-details-marker{display:none}
+</style>
+</head>
+<body>
+<div style="background: #152238; color: #E6EBF2; font-family: 'IBM Plex Sans KR', sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh">
+
+  <div style="position: relative; z-index: 20">
+  <header style="max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+    <a href="index.html" style="flex: none; display: flex; align-items: center; gap: 10px; text-decoration: none; color: #FFFFFF">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="12" y="2" width="4" height="24" fill="#7FD4FF"></rect><rect x="5" y="8" width="18" height="4" fill="#7FD4FF"></rect></svg>
+      <span style="font-family: 'Black Han Sans', sans-serif; font-size: clamp(17px, 4.4vw, 22px); white-space: nowrap">서산중앙성결교회 청년부</span>
+    </a>
+    <div style="display: flex; align-items: center; gap: 10px">
+      <a href="youth.html" style="display: inline-flex; align-items: center; white-space: nowrap; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid #3A5078; color: #E6EBF2; text-decoration: none; font-size: 14px; font-weight: 500">청소년부</a>
+      <a href="#newfriend" style="display: inline-flex; align-items: center; white-space: nowrap; min-height: 44px; padding: 0 18px; border-radius: 999px; background: #7FD4FF; color: #10131F; text-decoration: none; font-size: 14px; font-weight: 700">새가족</a>
+      <button type="button" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="menu" style="width: 48px; height: 48px; padding: 0; border-radius: 999px; border: 1.5px solid #3A5078; background: #1E2E4A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer">
+        <svg class="ic-menu" width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="19" y2="6"></line><line x1="3" y1="11" x2="19" y2="11"></line><line x1="3" y1="16" x2="19" y2="16"></line></svg>
+        <svg class="ic-close" hidden width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="5" x2="17" y2="17"></line><line x1="17" y1="5" x2="5" y2="17"></line></svg>
+      </button>
+    </div>
+  </header>
+  <div id="menu" hidden>
+    <div style="position: absolute; left: 0; right: 0; top: 100%; padding: 0 16px">
+      <nav aria-label="전체 메뉴" style="max-width: 1168px; margin: 0 auto; background: #1E2E4A; border: 1px solid #2E4366; border-radius: 24px; padding: 28px; display: flex; flex-wrap: wrap; gap: 28px">
+        <div style="flex: 999 1 420px; min-width: 0">
+          <p style="margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; color: #94A3BD">청년부</p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 4px 16px">
+            <template data-list="menuItems" data-as="m">
+              <a href="{{m.href}}" data-close style="display: flex; align-items: center; min-height: 48px; border-bottom: 1px solid #2E4366; color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 500">{{m.label}}</a>
+            </template>
+          </div>
+        </div>
+        <div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+          <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; color: #94A3BD">다른 부서</p>
+          <a href="youth.html" style="display: flex; flex-direction: column; gap: 4px; padding: 20px 22px; border-radius: 18px; background: #10131F; border: 1.5px solid #D4F36B; text-decoration: none">
+            <span style="font-family: 'Black Han Sans', sans-serif; font-size: 26px; color: #FFFFFF">청소년부 →</span>
+            <span style="font-size: 14px; color: #B9B6AE">주일 오전 11:30 · 교육관 3층</span>
+          </a>
+          <a href="index.html" style="display: flex; align-items: center; min-height: 48px; color: #B9C3D6; text-decoration: none; font-size: 15px">← 다음세대 첫 화면으로</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+  </div>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 96px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-end">
+    <div style="flex: 999 1 560px; min-width: 0">
+      <p style="margin: 0 0 20px; font-size: 15px; font-weight: 700; color: #7FD4FF; letter-spacing: 2px">SEOSAN CENTRAL HOLINESS CHURCH · 청년부</p>
+      <h1 style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: clamp(22px, 6vw, 58px); line-height: 1.22; color: #FFFFFF"><span style="display: block; white-space: nowrap">그리스도 안에 뿌리내리고,</span><span style="display: block; white-space: nowrap">함께 성장하다.</span></h1>
+      <p style="margin: 28px 0 0; font-size: 15px; font-weight: 700; letter-spacing: 2px; color: #E6EBF2">ROOTED IN CHRIST — 뿌리는 깊게, 사랑은 넓게, 믿음은 굳게.</p>
+      <p style="margin: 10px 0 0; max-width: 600px; font-size: 18px; color: #B9C3D6">하나님의 말씀 위에 삶을 세우고, 서로 사랑하며, 믿음으로 함께 성장하는 청년 공동체.</p>
+      <p style="margin: 14px 0 0; font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #7FD4FF">COLOSSIANS 2:6–7</p>
+    </div>
+    <div id="worship" style="flex: 1 1 300px; min-width: 0; background: #1E2E4A; border-radius: 20px; padding: clamp(20px, 5vw, 28px)">
+      <p style="margin: 0 0 4px; font-size: 13px; font-weight: 700; color: #94A3BD; letter-spacing: 1.5px">예배 안내</p>
+      <p style="margin: 0 0 20px; font-family: 'Black Han Sans', sans-serif; font-size: 30px; color: #FFFFFF">토요 청년 모임</p>
+      <div style="display: flex; flex-direction: column; gap: 14px; font-size: 15px">
+        <div style="display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid #2E4366; padding-top: 14px"><span style="color: #94A3BD">시간</span><span style="color: #FFFFFF; font-weight: 500; white-space: nowrap; font-size: clamp(13px, 3.8vw, 15px)">매주 토요일 오후 6:00 ~ 7:00</span></div>
+        <div style="display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid #2E4366; padding-top: 14px"><span style="color: #94A3BD">장소</span><span style="color: #FFFFFF; font-weight: 500">교육관 1층</span></div>
+        <div style="display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid #2E4366; padding-top: 14px"><span style="color: #94A3BD">모임</span><span style="color: #FFFFFF; font-weight: 500">[소그룹·셀 모임]</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="word" style="background: #E6EBF2; color: #152238">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 80px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+      <div style="flex: 999 1 520px; min-width: 0">
+        <p style="margin: 0 0 12px; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; color: #4C5A72">이번 주 말씀</p>
+        <template data-list="thisWeek" data-as="s"><h2 style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 44px; line-height: 1.15" data-fit>{{s.title}}</h2>
+        <p style="margin: 16px 0 0; font-weight: 500">{{s.passage}} · {{s.preacher}}</p></template>
+      </div>    </div>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px 80px">
+      <template data-list="thisWeek" data-as="s"><a href="{{s.href}}" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; background: #152238; color: #FFFFFF; border-radius: 28px; padding: 40px clamp(20px, 4vw, 48px); text-decoration: none">
+        <div style="flex: 999 1 460px; min-width: 0">
+          <p style="margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; color: #7FD4FF">설교 노트 · {{s.date}} {{s.service}}</p>
+          <p style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-size: clamp(22px, 3vw, 32px); line-height: 1.4" data-fit>{{s.headline}}</p>
+          <p style="margin: 14px 0 0; color: #B9C3D6">{{s.summary}}</p>
+        </div>
+        <span style="flex: none; display: inline-flex; align-items: center; white-space: nowrap; min-height: 56px; padding: 0 30px; border-radius: 999px; background: #7FD4FF; color: #10131F; font-weight: 700">이번 주 설교 노트 보기 →</span>
+      </a></template>
+      <div style="margin-top: 16px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+        <p style="margin: 0; font-size: 15px; font-weight: 500; color: #4C5A72">지난 설교 노트도 모두 모아 두었어요.</p>
+        <button type="button" id="notesBtn" aria-expanded="false" aria-controls="notes" style="display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 1.5px solid #152238; background: transparent; color: #152238; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer">전체 설교 노트 보기 ▾</button>
+      </div>
+      <div id="notes" hidden>
+        <div style="margin-top: 16px; background: #152238; border-radius: 24px; padding: 8px clamp(16px, 3vw, 32px)">
+          <template data-list="sermons" data-as="s">
+            <a href="{{s.href}}" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; padding: 18px 0; border-bottom: 1px solid #2E4366; color: #FFFFFF; text-decoration: none">
+              <span style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; min-width: 0">
+                <span style="flex: none; font-size: 14px; color: #94A3BD">{{s.date}}</span>
+                <span style="font-family: 'Black Han Sans', sans-serif; font-size: 20px">{{s.title}}</span>
+                <span style="font-size: 14px; color: #94A3BD">{{s.passage}}</span>
+              </span>
+              <span style="flex: none; font-size: 14px; font-weight: 700; color: #7FD4FF">노트 보기 →</span>
+            </a>
+          </template>
+          <p style="margin: 0; padding: 16px 0 12px; font-size: 13px; color: #94A3BD">매주 설교 노트(HTML)를 이 목록 맨 위에 하나씩 추가하면 됩니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="folders" style="max-width: 1200px; margin: 0 auto; padding: 88px 24px">
+    <h2 style="margin: 0 0 8px; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 36px; color: #FFFFFF">소식과 기록</h2>
+    <p style="margin: 0 0 24px; color: #94A3BD">폴더를 누르면 안의 내용이 펼쳐져요.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px">
+      <button type="button" id="notice" data-folder="notice" aria-expanded="false" aria-controls="panel-notice" style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px; text-align: left; padding: clamp(20px, 5vw, 28px); border-radius: 22px; background: #1E2E4A; border: 1.5px solid #2E4366; color: #E6EBF2; font-family: inherit; cursor: pointer; scroll-margin-top: 24px">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#7FD4FF" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 a3 3 0 0 1 3 -3 h8 l4 4 h14 a3 3 0 0 1 3 3 v16 a3 3 0 0 1 -3 3 h-26 a3 3 0 0 1 -3 -3 z"></path><line x1="4" y1="16" x2="36" y2="16"></line></svg>
+        <span style="font-family: 'Black Han Sans', sans-serif; font-size: 26px; line-height: 1.2; color: #FFFFFF">공지사항</span>
+        <span style="font-size: clamp(13px, 3.8vw, 15px); white-space: nowrap; color: #94A3BD">예배·일정·준비물 소식을 한곳에</span>
+        <span style="margin-top: 6px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; width: 100%">
+          <span style="font-size: 14px; color: #94A3BD"><span data-count="notices">0</span>개 소식</span>
+          <span style="font-size: 15px; font-weight: 700; color: #7FD4FF" data-label>열어 보기 ▾</span>
+        </span>
+      </button>
+      <button type="button" id="photos" data-folder="story" aria-expanded="false" aria-controls="panel-story" style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px; text-align: left; padding: clamp(20px, 5vw, 28px); border-radius: 22px; background: #1E2E4A; border: 1.5px solid #2E4366; color: #E6EBF2; font-family: inherit; cursor: pointer; scroll-margin-top: 24px">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#7FD4FF" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 a3 3 0 0 1 3 -3 h8 l4 4 h14 a3 3 0 0 1 3 3 v16 a3 3 0 0 1 -3 3 h-26 a3 3 0 0 1 -3 -3 z"></path><line x1="4" y1="16" x2="36" y2="16"></line></svg>
+        <span style="font-family: 'Black Han Sans', sans-serif; font-size: 26px; line-height: 1.2; color: #FFFFFF">우리들의 이야기</span>
+        <span style="font-size: clamp(13px, 3.8vw, 15px); white-space: nowrap; color: #94A3BD">청년부의 예배·수련회·모임 사진 앨범</span>
+        <span style="margin-top: 6px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; width: 100%">
+          <span style="font-size: 14px; color: #94A3BD"><span data-count="photos">0</span>개 앨범</span>
+          <span style="font-size: 15px; font-weight: 700; color: #7FD4FF" data-label>열어 보기 ▾</span>
+        </span>
+      </button>
+      <button type="button" id="videos" data-folder="memory" aria-expanded="false" aria-controls="panel-memory" style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px; text-align: left; padding: clamp(20px, 5vw, 28px); border-radius: 22px; background: #1E2E4A; border: 1.5px solid #2E4366; color: #E6EBF2; font-family: inherit; cursor: pointer; scroll-margin-top: 24px">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#7FD4FF" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 a3 3 0 0 1 3 -3 h8 l4 4 h14 a3 3 0 0 1 3 3 v16 a3 3 0 0 1 -3 3 h-26 a3 3 0 0 1 -3 -3 z"></path><line x1="4" y1="16" x2="36" y2="16"></line></svg>
+        <span style="font-family: 'Black Han Sans', sans-serif; font-size: 26px; line-height: 1.2; color: #FFFFFF">우리들의 추억영상</span>
+        <span style="font-size: clamp(13px, 3.8vw, 15px); white-space: nowrap; color: #94A3BD">함께한 순간을 영상으로 다시 보기</span>
+        <span style="margin-top: 6px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; width: 100%">
+          <span style="font-size: 14px; color: #94A3BD"><span data-count="videos">0</span>개 영상</span>
+          <span style="font-size: 15px; font-weight: 700; color: #7FD4FF" data-label>열어 보기 ▾</span>
+        </span>
+      </button>
+    </div>
+
+    <div id="panel-notice" data-panel="notice" hidden>
+      <div style="margin-top: 16px; background: #1E2E4A; border-radius: 22px; padding: 8px clamp(16px, 3vw, 32px)">
+        <template data-list="notices" data-as="n">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 16px; padding: 18px 0; border-bottom: 1px solid #2E4366; color: #E6EBF2">
+            <span style="display: flex; gap: 12px; align-items: center; min-width: 0">
+              <span style="flex: none; width: 56px; text-align: center; font-size: 12px; font-weight: 700; color: #10131F; background: {{n.tagColor}}; padding: 3px 0; border-radius: 999px">{{n.tag}}</span>
+              <span style="min-width: 0">{{n.title}}<span style="display: block; font-size: 14px; color: #94A3BD">{{n.detail}}</span></span>
+            </span>
+            <span style="flex: none; color: #94A3BD; font-size: 14px">{{n.date}}</span>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <div id="panel-story" data-panel="story" hidden>
+      <div style="margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px">
+        <template data-list="photos" data-as="p">
+          <div style="aspect-ratio: 4 / 3; border-radius: 16px; background: #1E2E4A url('{{p.src}}') center / cover no-repeat; border: 1.5px dashed #3A5078; display: flex; align-items: flex-end; padding: 16px; box-sizing: border-box">
+            <span style="font-size: 14px; color: #FFFFFF; background: rgba(0,0,0,.45); padding: 2px 10px; border-radius: 999px">{{p.caption}}</span>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <div id="panel-memory" data-panel="memory" hidden>
+      <div style="margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px">
+        <template data-list="videos" data-as="v">
+          <a href="{{v.url}}" style="display: flex; flex-direction: column; gap: 10px; text-decoration: none">
+            <div style="aspect-ratio: 16 / 9; border-radius: 16px; background: #1E2E4A; border: 1.5px dashed #3A5078; display: flex; align-items: center; justify-content: center">
+              <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="none" stroke="#7FD4FF" stroke-width="2"></circle><path d="M18 14 L31 22 L18 30 Z" fill="#7FD4FF"></path></svg>
+            </div>
+            <span style="font-size: 15px; color: #94A3BD">{{v.title}}</span>
+          </a>
+        </template>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 88px">
+    <p style="margin: 0 0 12px; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; color: #94A3BD">청년부 소개</p>
+    <h2 style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: clamp(20px, 6vw, 56px); line-height: 1.25; color: #FFFFFF"><span style="display: block; white-space: nowrap">그리스도 안에 뿌리내리고,</span><span style="display: block; white-space: nowrap">함께 성장하는 공동체</span></h2>
+    <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 40px">
+      <div style="flex: 999 1 520px; min-width: 0; font-size: 17px; line-height: 1.75; display: flex; flex-direction: column; gap: 16px">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 8px">
+          <img src="images/pastor.jpg" alt="청년부 담당 김진웅 목사" style="flex: none; width: clamp(80px, 22vw, 112px); height: clamp(80px, 22vw, 112px); border-radius: 999px; object-fit: cover; border: 3px solid #7FD4FF">
+          <p style="flex: 1 1 0; min-width: 0; margin: 0; font-family: 'Black Han Sans', sans-serif; font-size: clamp(17px, 4.6vw, 28px); line-height: 1.35; color: #FFFFFF"><span style="display: block; white-space: nowrap">반가워요!</span><span style="display: block; white-space: nowrap">청년부를 섬기는</span><span style="display: block; white-space: nowrap">김진웅 목사입니다.</span></p>
+        </div>
+        <p style="margin: 0">청년의 시기는 삶의 방향을 고민하고, 자신의 정체성을 발견하며, 미래를 준비해 가는 소중한 시간입니다. 진로와 일, 관계와 신앙 사이에서 수많은 질문을 마주하는 이때에 우리는 무엇을 기준으로 살아가야 할까요?</p>
+        <p style="margin: 0">서산중앙성결교회 청년부는 예수 그리스도 안에 삶의 뿌리를 내리고, 하나님의 말씀을 따라 함께 성장하는 믿음의 공동체입니다.</p>
+        <p style="margin: 0">골로새서 2장 6–7절은 우리가 그리스도 예수를 주로 받았으니 그 안에서 행하고, 그 안에 뿌리를 박으며 믿음에 굳게 서서 감사함을 넘치게 하라고 가르칩니다. 우리는 이 말씀을 따라 예수님을 믿는 데서 멈추지 않고, 삶의 모든 자리에서 주님과 동행하는 청년으로 자라가기를 소망합니다.</p>
+        <p style="margin: 0">우리는 함께 예배하고 말씀을 배우며 하나님을 더욱 깊이 알아갑니다. 서로의 삶을 나누고 기도하며, 기쁨과 어려움 속에서도 서로를 격려하고 세워 줍니다. 혼자서 신앙을 지키는 것이 아니라 함께 믿음의 길을 걸으며, 그리스도의 사랑으로 연결되는 공동체를 만들어 갑니다.</p>
+        <p style="margin: 0">우리의 믿음은 교회 안에만 머물지 않습니다. 학교와 직장, 가정과 일상의 모든 자리에서 하나님의 뜻을 구하고, 말씀을 따라 선택하며, 예수님의 사랑을 실천하기를 소망합니다. 세상의 기준에 흔들리기보다 그리스도 안에 깊이 뿌리내리고, 어떤 상황에서도 믿음 위에 굳게 서는 청년이 되기를 바랍니다.</p>
+        <p style="margin: 0">우리는 완벽한 사람들이 모인 공동체가 아닙니다. 하나님을 더 깊이 알아가고, 서로의 연약함을 품으며, 넘어져도 다시 일어나 함께 성장하는 공동체입니다.</p>
+        <p style="margin: 0; font-family: 'IBM Plex Sans KR', sans-serif; font-weight: 700; font-size: clamp(18px, 5vw, 24px); line-height: 1.55; color: #FFFFFF" data-fit>그리스도 안에 깊이 뿌리내리고,<br>사랑으로 서로를 세우며,<br>믿음으로 세상 가운데<br>살아가는 청년부.</p>'
+      </div>
+      <div style="flex: 1 1 320px; min-width: 0; align-self: flex-start; background: #1E2E4A; border-radius: 20px; padding: clamp(20px, 5vw, 28px)">
+        <p style="margin: 0 0 6px; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; color: #94A3BD">청년부 핵심 말씀</p>
+        <p style="margin: 0 0 14px; font-family: 'Black Han Sans', sans-serif; font-size: clamp(18px, 5.4vw, 24px); white-space: nowrap; color: #FFFFFF">그리스도 안에 뿌리내리라</p>
+        <p style="margin: 0; font-size: 17px; font-weight: 500; color: #FFFFFF">그러므로 너희가 그리스도 예수를 주로 받았으니 그 안에서 행하되 그 안에 뿌리를 박으며 세움을 받아 교훈을 받은 대로 믿음에 굳게 서서 감사함을 넘치게 하라</p>
+        <p style="margin: 14px 0 0; color: #7FD4FF; font-weight: 700">골로새서 2:6–7</p>
+        <p style="margin: 20px 0 8px; padding-top: 16px; border-top: 1px solid #2E4366; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; color: #94A3BD">우리의 믿음과 삶의 방향</p>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <template data-list="roots" data-as="r">
+            <div style="font-size: 15px; color: #B9C3D6"><span style="font-weight: 700; color: #FFFFFF">{{r.head}}</span> · {{r.body}}</div>
+          </template>
+        </div>
+      </div>
+    </div>
+    <h3 style="margin: 64px 0 20px; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 36px; color: #FFFFFF">청년부 교육 목표</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 12px">
+      <template data-list="goals" data-as="g">
+        <div style="background: #1E2E4A; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+          <span style="font-family: 'Black Han Sans', sans-serif; font-size: 28px; color: #7FD4FF">{{g.no}}</span>
+          <span style="font-family: 'Black Han Sans', sans-serif; font-size: clamp(17px, 4.8vw, 22px); white-space: nowrap; color: #FFFFFF">{{g.title}}</span>
+          <span style="color: #B9C3D6">{{g.body}}</span>
+          <span style="align-self: flex-start; margin-top: 4px; padding: 4px 12px; border-radius: 999px; background: #7FD4FF; color: #10131F; font-size: 13px; font-weight: 700">핵심 가치 · {{g.value}}</span>
+        </div>
+      </template>
+    </div>
+  </section>
+
+  <section id="newfriend" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 80px">
+    <div style="background: #7FD4FF; color: #10131F; border-radius: 28px; padding: 48px clamp(20px, 5vw, 40px); display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between">
+      <div style="flex: 999 1 420px; min-width: 0">
+        <h2 style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: clamp(22px, 6vw, 46px); line-height: 1.25"><span style="display: block; white-space: nowrap">서산에서 함께 예배할</span><span style="display: block; white-space: nowrap">청년을 기다립니다</span></h2>
+        <p style="margin: 14px 0 0; font-size: 17px; font-weight: 500">하나님을 더 깊이 만나고 싶은 청년, 믿음의 친구들과 함께 성장하고 싶은 청년, 자신의 삶을 하나님께 드리기 원하는 모든 청년을 환영합니다. 매주 토요일 오후 6시, 교육관 1층에서 만나요.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid #2E4366">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px 56px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; font-size: 14px; color: #94A3BD">
+      <div>
+        <div style="font-family: 'Black Han Sans', sans-serif; font-size: 20px; color: #FFFFFF">서산중앙성결교회 청년부</div>
+        <div style="margin-top: 6px">충남 서산시 석림5길 9 · 교육관 1층</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <a href="tel:041-665-1982" style="padding: 4px 0">교회 전화 <span style="white-space: nowrap">041-665-1982</span></a>
+        <a href="index.html" style="padding: 4px 0">← 다음세대 첫 화면으로</a>
+      </div>
+    </div>
+  </footer>
+</div>
+<script>
+/* ▼ 이 페이지의 목록 내용. 여기만 고치면 화면이 바뀝니다. (README.md 참고) */
+window.PAGE_DATA = {
+  // 설교 노트: 새 노트는 맨 위에 추가 → 맨 위 항목이 '이번 주 말씀' 카드로 자동 표시됩니다. headline의 \n은 줄바꿈입니다.
+  sermons: [
+    {
+      "date": "2026.10.10",
+      "title": "왜 믿음이 다른가?",
+      "passage": "마태복음 12:46–13:23",
+      "preacher": "김진웅 목사",
+      "service": "토요 청년 모임",
+      "headline": "씨는 같습니다. 땅이 다릅니다.",
+      "summary": "네 가지 마음 밭 점검 · 비유의 주인공 · 정직한 기도 · 이번 주 딱 한 가지",
+      "href": "sermons/2026-10-10.html"
+    }
+  ],
+  // 공지사항: 일정도 tag를 '일정'으로 해서 여기에 넣습니다.
+  notices: [
+    {
+      "tag": "모임",
+      "tagColor": "#7FD4FF",
+      "title": "[모임 안내 제목]",
+      "detail": "[한 줄 설명]",
+      "date": "[00.00]"
+    },
+    {
+      "tag": "일정",
+      "tagColor": "#FFB86B",
+      "title": "[청년 수련회]",
+      "detail": "[장소 · 시간]",
+      "date": "[00.00]"
+    },
+    {
+      "tag": "일정",
+      "tagColor": "#FFB86B",
+      "title": "[기도회·집회]",
+      "detail": "[장소 · 시간]",
+      "date": "[00.00]"
+    },
+    {
+      "tag": "안내",
+      "tagColor": "#C9C6BE",
+      "title": "[청년부 공지 제목]",
+      "detail": "[한 줄 설명]",
+      "date": "[00.00]"
+    }
+  ],
+  // src에 images/폴더의 사진 경로를 넣으면 사진이 보입니다
+  photos: [
+    {
+      "caption": "[예배 사진]",
+      "src": ""
+    },
+    {
+      "caption": "[수련회 사진]",
+      "src": ""
+    },
+    {
+      "caption": "[모임 사진]",
+      "src": ""
+    },
+    {
+      "caption": "[친교 활동 사진]",
+      "src": ""
+    }
+  ],
+  // url에 유튜브 주소를 넣으면 눌렀을 때 영상으로 이동합니다
+  videos: [
+    {
+      "title": "[수련회 하이라이트 영상]",
+      "url": "#videos"
+    },
+    {
+      "title": "[찬양 영상]",
+      "url": "#videos"
+    }
+  ],
+  // ☰ 메뉴 항목
+  menuItems: [
+    {
+      "label": "청년부 소개",
+      "href": "#about"
+    },
+    {
+      "label": "예배 안내",
+      "href": "#worship"
+    },
+    {
+      "label": "말씀과 설교",
+      "href": "#word"
+    },
+    {
+      "label": "공지사항",
+      "href": "#notice"
+    },
+    {
+      "label": "우리들의 이야기",
+      "href": "#photos"
+    },
+    {
+      "label": "우리들의 추억영상",
+      "href": "#videos"
+    },
+    {
+      "label": "새가족 안내",
+      "href": "#newfriend"
+    }
+  ],
+  roots: [
+    {
+      "head": "뿌리를 내리고",
+      "body": "예수 그리스도를 삶의 중심으로 삼습니다."
+    },
+    {
+      "head": "세움을 받고",
+      "body": "말씀 안에서 믿음과 인격이 자라갑니다."
+    },
+    {
+      "head": "믿음에 굳게 서서",
+      "body": "세상의 여러 상황 속에서도 주님을 신뢰합니다."
+    },
+    {
+      "head": "감사를 넘치게 하며",
+      "body": "받은 은혜를 기억하고 감사하는 삶을 살아갑니다."
+    }
+  ],
+  goals: [
+    {
+      "no": "01",
+      "title": "말씀에 깊이 뿌리내리는 청년",
+      "body": "성경을 배우고 묵상하며 하나님의 뜻을 알아가고, 말씀을 삶의 기준으로 삼습니다.",
+      "value": "말씀과 뿌리"
+    },
+    {
+      "no": "02",
+      "title": "믿음 위에 굳게 서는 청년",
+      "body": "삶의 선택과 어려움 속에서도 그리스도를 의지하고, 흔들림 없이 믿음의 길을 걸어갑니다.",
+      "value": "믿음과 성숙"
+    },
+    {
+      "no": "03",
+      "title": "사랑으로 함께 성장하는 청년",
+      "body": "서로의 삶을 존중하고 기도와 섬김으로 동행하며, 그리스도의 사랑으로 서로를 세워 줍니다.",
+      "value": "사랑과 공동체"
+    },
+    {
+      "no": "04",
+      "title": "삶으로 믿음을 실천하는 청년",
+      "body": "학교와 직장, 가정과 일상에서 말씀을 실천하고, 예수님의 제자로 살아갑니다.",
+      "value": "실천과 사명"
+    }
+  ]
+};
+</script>
+<script src="assets/site.js"></script>
+</body>
+</html>
