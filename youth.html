@@ -167,6 +167,9 @@ summary{list-style:none}summary::-webkit-details-marker{display:none}
               <span style="min-width: 0">{{n.title}}<span style="display: block; font-size: 14px; color: #8E92A6">{{n.detail}}</span></span>
             </span>
             <span style="flex: none; color: #8E92A6; font-size: 14px">{{n.date}}</span>
+            <a data-notice-image="{{n.image}}" href="{{n.image}}" target="_blank" rel="noopener" style="flex: 1 1 100%; display: block; max-width: 360px; margin-top: 8px; border-radius: 14px; overflow: hidden; border: 1.5px solid #2C3145">
+              <img src="{{n.thumb}}" alt="{{n.title}} 안내 이미지" loading="lazy" style="display: block; width: 100%; height: auto">
+            </a>
           </div>
         </template>
       </div>
@@ -282,39 +285,22 @@ window.PAGE_DATA = {
   // 공지사항: 일정도 tag를 '일정'으로 해서 여기에 넣습니다.
   notices: [
     {
-      "tag": "예배",
-      "tagColor": "#D4F36B",
-      "title": "[예배 관련 공지 제목]",
-      "detail": "[한 줄 설명]",
-      "date": "[00.00]"
+      "tag": "일정",
+      "tagColor": "#FFB86B",
+      "title": "청소년부 프리마켓",
+      "detail": "10월 25일(주일) 오전 10시~오후 2시 · 쉴만한 물가 카페\n이날 청소년부 예배는 1부(오전 9시) 예배로 대신합니다. 청소년부 친구들은 1부 예배에 꼭 참석해 주세요!",
+      "date": "10.25",
+      "image": "images/notices/2026-free-market.jpg",
+      "thumb": "images/notices/2026-free-market-thumb.jpg"
     },
     {
       "tag": "일정",
       "tagColor": "#FFB86B",
-      "title": "[수련회 이름]",
-      "detail": "[장소 · 시간]",
-      "date": "[00.00]"
-    },
-    {
-      "tag": "일정",
-      "tagColor": "#FFB86B",
-      "title": "[특별집회 이름]",
-      "detail": "[장소 · 시간]",
-      "date": "[00.00]"
-    },
-    {
-      "tag": "준비물",
-      "tagColor": "#7FD4FF",
-      "title": "[준비물 안내 제목]",
-      "detail": "[한 줄 설명]",
-      "date": "[00.00]"
-    },
-    {
-      "tag": "안내",
-      "tagColor": "#C9C6BE",
-      "title": "[일반 안내 제목]",
-      "detail": "[한 줄 설명]",
-      "date": "[00.00]"
+      "title": "2026 친구초청 잔치",
+      "detail": "11월 15일(주일) 오후 2시 · 서산중앙성결교회 교육관 3층\n이날 청소년부 예배는 1부(오전 9시) 예배로 대신합니다. 청소년부 친구들은 1부 예배에 꼭 참석해 주세요!",
+      "date": "11.15",
+      "image": "images/notices/2026-friends-party.jpg",
+      "thumb": "images/notices/2026-friends-party-thumb.jpg"
     }
   ],
   // 우리들의 이야기 앨범: 사진은 folder 안에 01.jpg(큰 사진)와 01-thumb.jpg(작은 사진)로 넣고 photos에 파일 이름을 적습니다. 첫 사진이 표지가 됩니다.

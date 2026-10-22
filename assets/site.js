@@ -28,6 +28,10 @@
     }).join('');
     t.insertAdjacentHTML('beforebegin', html);
   });
+  // 공지 이미지: image가 없는 공지는 이미지 자리를 지움
+  document.querySelectorAll('[data-notice-image]').forEach(function (a) {
+    if (!a.getAttribute('data-notice-image')) a.remove();
+  });
 
   // 1-1) data-fit: 줄마다 한 줄로 고정하고, 화면이 좁으면 글자 크기를 줄여 맞춤
   //      (설교 제목·카드 문장은 줄바꿈하고 싶은 곳에 \n 을 넣으면 그 자리에서만 줄이 바뀜)
