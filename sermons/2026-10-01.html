@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>영점이 틀어질 때 — 민수기 22:15–40 | 서산중앙성결교회</title>
+<meta property="og:title" content="영점이 틀어질 때 · 청소년부 설교">
+<meta property="og:description" content="민수기 22:15–40 · 내 마음의 진짜 기준을 점검하라">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  /* Layout: 한 줄로 읽어 내려가는 설교 노트. 짙은 청록 띠(도입·핵심·결단) 사이에 밝은 카드.
+     대지 세 개는 '경로' 번호로 이어지고, 각 대지 안에 절 흐름도를 넣었다. */
+  :root {
+    --band: #10303A;
+    --band-deep: #0A2129;
+    --band-ink: #F2F7F7;
+    --band-muted: #A9C2C6;
+    --signal: #F08A3C;      /* 재탐색·경고 */
+    --signal-soft: #FDEBDD;
+    --route: #2E8C86;       /* 바른 길 */
+    --route-soft: #DDF0EE;
+    --bg: #F4F6F4;
+    --card: #FFFFFF;
+    --soft: #EEF2F1;
+    --ink: #13222A;
+    --muted: #55656C;
+    --line: #D8E0DF;
+    --font-display: 'Gowun Batang', 'Noto Serif KR', serif;
+    --font-body: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); background: var(--bg); color: var(--ink); font-size: 16px; line-height: 1.75; }
+  h1, h2, h3 { font-family: var(--font-display); line-height: 1.3; text-wrap: balance; }
+  strong { font-weight: 700; }
+
+  .topbar { background: var(--band-deep); padding: 12px 20px; }
+  .topbar a { color: #F7B27C; font: 500 14px/1.4 var(--font-body); text-decoration: none; }
+
+  /* Hero */
+  .hero { background: var(--band); color: var(--band-ink); padding: 52px 20px 48px; text-align: center; position: relative; overflow: hidden; }
+  .hero-in { max-width: 700px; margin: 0 auto; position: relative; }
+  .scope { width: 104px; height: 104px; margin: 0 auto 18px; display: block; }
+  .hero-church { font-size: 12px; letter-spacing: 3px; color: var(--band-muted); }
+  .hero-series { display: inline-block; margin: 10px 0 18px; border: 1px solid rgba(240,138,60,.6); color: #F7B27C; border-radius: 999px; padding: 3px 16px; font-size: 12px; }
+  .hero-date { font-size: 13px; color: var(--band-muted); }
+  .hero h1 { font-size: clamp(34px, 8.4vw, 56px); color: #fff; margin: 4px 0 10px; }
+  .hero-sub { font-family: var(--font-display); font-size: clamp(17px, 4.4vw, 21px); color: #F7B27C; }
+  .hero-scripture { margin-top: 12px; font-size: 14px; color: var(--band-muted); }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 28px 20px 48px; display: flex; flex-direction: column; gap: 16px; }
+  .label { font-size: 12px; font-weight: 700; letter-spacing: 2px; color: var(--route); }
+  .card { background: var(--card); border-radius: 16px; padding: 26px 24px; box-shadow: 0 3px 14px rgba(16,48,58,.07); display: flex; flex-direction: column; gap: 14px; }
+  .card h2 { font-size: 23px; }
+  .muted { color: var(--muted); }
+  .verse-ref { font-size: 13px; color: var(--muted); }
+
+  /* 도입: 두 가지 길 잃음 */
+  .lost { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+  .lost > div { border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .lost .a { background: var(--soft); }
+  .lost .b { background: var(--signal-soft); border: 1.5px solid var(--signal); }
+  .lost h3 { font-size: 19px; }
+  .lost .tag { align-self: flex-start; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 2px 10px; }
+  .lost .a .tag { background: #fff; color: var(--muted); }
+  .lost .b .tag { background: var(--signal); color: #fff; }
+  .lost dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; font-size: 15px; }
+  .lost dt { font-weight: 700; color: var(--muted); }
+  .rule { font-family: var(--font-display); font-size: 18px; font-weight: 700; text-align: center; padding-top: 4px; }
+  .rule span { color: var(--signal); }
+  .whisper { display: flex; flex-wrap: wrap; gap: 8px; }
+  .whisper span { font-size: 14px; background: var(--soft); border-radius: 999px; padding: 5px 14px; }
+
+  /* 대지 카드 */
+  .point-head { display: flex; align-items: center; gap: 14px; }
+  .pin { flex: none; width: 46px; height: 46px; border-radius: 50%; background: var(--band); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 22px; font-weight: 700; }
+  .point-head h2 { font-size: 22px; }
+  .point-head .verse-ref { display: block; }
+
+  /* 절 흐름도 */
+  .steps { list-style: none; display: grid; gap: 0; }
+  .steps li { display: grid; grid-template-columns: 58px 1fr; gap: 12px; position: relative; padding: 0 0 14px; }
+  .steps li::before { content: ''; position: absolute; left: 28px; top: 30px; bottom: 0; width: 2px; background: var(--line); }
+  .steps li:last-child { padding-bottom: 0; }
+  .steps li:last-child::before { display: none; }
+  .steps .v { width: 58px; height: 30px; border-radius: 999px; background: var(--soft); color: var(--ink); font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; font-variant-numeric: tabular-nums; }
+  .steps .hot .v { background: var(--signal); color: #fff; }
+  .steps .good .v { background: var(--route); color: #fff; }
+  .steps .t { font-weight: 700; font-size: 15px; }
+  .steps .d { font-size: 15px; color: var(--muted); }
+
+  .callout { background: var(--signal-soft); border-left: 4px solid var(--signal); border-radius: 0 12px 12px 0; padding: 14px 16px; font-size: 15px; }
+  .callout b { color: #B3541A; }
+  .quote { font-family: var(--font-display); font-size: 17px; background: var(--soft); border-radius: 12px; padding: 14px 18px; }
+  .quote small { display: block; margin-top: 4px; font-family: var(--font-body); font-size: 12px; color: var(--muted); }
+
+  /* 재탐색 버튼 */
+  .reroute { display: flex; align-items: center; gap: 14px; background: var(--band); color: var(--band-ink); border-radius: 14px; padding: 16px 18px; }
+  .reroute svg { flex: none; width: 44px; height: 44px; }
+  .reroute p { font-size: 15px; }
+  .reroute b { color: #F7B27C; }
+
+  /* 나귀 세 번 */
+  .three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .three div { border-radius: 12px; padding: 12px 8px; text-align: center; background: var(--signal-soft); }
+  .three div:nth-child(2) { background: #F9D2B4; }
+  .three div:nth-child(3) { background: var(--signal); color: #fff; }
+  .three b { display: block; font-family: var(--font-display); font-size: 18px; }
+  .three span { font-size: 12px; }
+  .three small { display: block; font-size: 12px; opacity: .85; }
+
+  .split { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+  .split div { border-radius: 12px; padding: 14px 16px; min-width: 0; }
+  .split .say { background: var(--route-soft); }
+  .split .but { background: var(--signal-soft); }
+  .split p.k { font-size: 12px; font-weight: 700; letter-spacing: 1px; color: var(--muted); }
+  .split p.q { font-family: var(--font-display); font-size: 17px; font-weight: 700; }
+
+  .donkeys { list-style: none; display: grid; gap: 8px; }
+  .donkeys li { display: flex; gap: 10px; align-items: baseline; background: var(--soft); border-radius: 10px; padding: 10px 14px; font-size: 15px; }
+  .donkeys li::before { content: '🔔'; font-size: 14px; }
+  .ask { font-family: var(--font-display); font-size: 18px; font-weight: 700; text-align: center; padding: 6px 0 2px; }
+
+  /* 도착 비교 */
+  .arrive { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .arrive div { background: var(--soft); border-radius: 12px; padding: 14px; text-align: center; min-width: 0; }
+  .arrive b { display: block; font-size: 15px; }
+  .arrive span { font-size: 14px; color: var(--muted); }
+  .arrive .x { background: var(--signal-soft); }
+
+  /* 핵심 띠 */
+  .thesis { background: var(--band); color: var(--band-ink); border-radius: 16px; padding: 30px 24px; text-align: center; display: flex; flex-direction: column; gap: 12px; }
+  .thesis .label { color: #F7B27C; }
+  .thesis p.big { font-family: var(--font-display); font-size: clamp(22px, 5.4vw, 30px); font-weight: 700; line-height: 1.45; }
+  .thesis p.big em { font-style: normal; color: #F7B27C; }
+  .thesis .sub { color: var(--band-muted); font-size: 15px; }
+
+  /* 해결: 노력 vs 길 되신 분 */
+  .vs { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: stretch; }
+  .vs > div { border-radius: 14px; padding: 16px 14px; text-align: center; display: flex; flex-direction: column; gap: 4px; justify-content: center; min-width: 0; }
+  .vs .no { background: var(--soft); color: var(--muted); }
+  .vs .no b { text-decoration: line-through; text-decoration-color: var(--signal); text-decoration-thickness: 2px; }
+  .vs .yes { background: var(--route); color: #fff; }
+  .vs .arrow { align-self: center; color: var(--route); font-size: 22px; font-weight: 700; padding: 0; }
+  .vs b { font-family: var(--font-display); font-size: 19px; }
+  .vs span { font-size: 13px; }
+
+  .love { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+  .love div { background: var(--route-soft); border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .love b { font-size: 15px; }
+  .love span { font-size: 14px; color: var(--muted); }
+
+  .key-verse { background: var(--card); border: 2px solid var(--route); border-radius: 16px; padding: 24px; text-align: center; }
+  .key-verse .label { margin-bottom: 8px; }
+  .key-verse p { font-family: var(--font-display); font-size: clamp(18px, 4.6vw, 22px); font-weight: 700; line-height: 1.6; }
+  .key-verse small { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; }
+
+  /* 점검표 */
+  .checks { display: grid; gap: 10px; }
+  .check { display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: start; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); cursor: pointer; }
+  .check input { width: 20px; height: 20px; margin-top: 3px; accent-color: var(--route); cursor: pointer; }
+  .check:has(input:checked) { border-color: var(--route); background: var(--route-soft); }
+  .check b { display: block; font-size: 15px; }
+  .check span { font-size: 14px; color: var(--muted); }
+  .check:focus-within { outline: 2px solid var(--route); outline-offset: 2px; }
+  .mine { display: flex; flex-direction: column; gap: 6px; }
+  .mine label { font-size: 14px; font-weight: 700; }
+  .mine input { width: 100%; font: inherit; font-size: 15px; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+  .mine input:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
+  .mine small { color: var(--muted); font-size: 12px; }
+
+  .blessing { background: var(--band); color: var(--band-ink); border-radius: 16px; padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; }
+  .blessing .label { color: #F7B27C; }
+  .blessing p { font-family: var(--font-display); font-size: 17px; line-height: 1.9; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags span { font-size: 13px; padding: 5px 14px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); color: var(--muted); }
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding-top: 20px; border-top: 1px solid var(--line); }
+  footer b { display: block; font-family: var(--font-display); font-size: 16px; color: var(--ink); }
+
+  @media (max-width: 480px) {
+    .card, .thesis, .blessing, .key-verse { padding: 22px 18px; }
+    .vs { grid-template-columns: 1fr; }
+    .vs .arrow { transform: rotate(90deg); justify-self: center; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"><a href="../youth.html">← 서산중앙성결교회 청소년부</a></div>
+
+<header class="hero">
+  <div class="hero-in">
+    <svg class="scope" viewBox="0 0 104 104" aria-hidden="true">
+      <circle cx="52" cy="52" r="44" fill="none" stroke="#A9C2C6" stroke-width="2"></circle>
+      <circle cx="52" cy="52" r="26" fill="none" stroke="#A9C2C6" stroke-width="1.5" stroke-dasharray="4 4"></circle>
+      <path d="M52 2v24M52 78v24M2 52h24M78 52h24" stroke="#A9C2C6" stroke-width="2"></path>
+      <circle cx="52" cy="52" r="4" fill="#2E8C86"></circle>
+      <circle cx="66" cy="40" r="6" fill="#F08A3C"></circle>
+      <path d="M62 44 L55 49" stroke="#F08A3C" stroke-width="2" stroke-dasharray="3 3"></path>
+    </svg>
+    <div class="hero-church">서산중앙성결교회</div>
+    <div class="hero-series">청소년부 설교</div>
+    <div class="hero-date">2026년 10월 1일</div>
+    <h1>영점이 틀어질 때</h1>
+    <p class="hero-sub">내 마음의 진짜 기준을 점검하라</p>
+    <p class="hero-scripture">민수기 22장 15–40절</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="card" aria-labelledby="intro">
+    <p class="label">들어가며</p>
+    <h2 id="intro">길을 잃는 두 가지 방법</h2>
+    <div class="lost">
+      <div class="a">
+        <span class="tag">예능 '풍향고'</span>
+        <h3>기준이 없어서 헤맨 사람들</h3>
+        <dl><dt>노력</dt><dd>지도에 동그라미, 표지판 확인, 길 묻기. 누구보다 성실했어요.</dd><dt>결과</dt><dd>엉뚱한 국도, 처음 보는 동네를 뱅뱅.</dd></dl>
+      </div>
+      <div class="b">
+        <span class="tag">민수기 22장 발람</span>
+        <h3>기준이 있는데 무시한 사람</h3>
+        <dl><dt>기준</dt><dd>하나님이 이미 "가지 말라"고 분명히 말씀하셨어요.</dd><dt>행동</dt><dd>가고 싶은 길이 따로 있어서 계속 '재탐색'.</dd></dl>
+      </div>
+    </div>
+    <p class="rule">기준이 틀어지면 <span>열심히 할수록</span> 목적지에서 더 멀어집니다.</p>
+    <p class="muted" style="font-size:15px">마음속에서 슬그머니 이런 타협이 시작될 때, 신앙은 조용히 궤도를 이탈합니다.</p>
+    <div class="whisper"><span>"이 정도 타협은 괜찮겠지?"</span><span>"남들 다 이렇게 쓰는데 나만 유난?"</span></div>
+    <p style="font-size:15px">오늘 제목의 <b>'영점'</b>은 이 기준을 다시 맞춘다는 뜻입니다.</p>
+  </section>
+
+  <!-- 대지 1 -->
+  <section class="card" aria-labelledby="p1">
+    <div class="point-head">
+      <span class="pin">1</span>
+      <div><h2 id="p1">이미 받은 답을 다시 묻는 마음</h2><span class="verse-ref">민수기 22:15–21 · 벧후 2:15</span></div>
+    </div>
+    <ol class="steps" aria-label="발람의 마음 흐름">
+      <li class="good"><span class="v">12절</span><div><p class="t">하나님의 답: 분명한 NO</p><p class="d">그들과 함께 가지도, 그 백성을 저주하지도 말라.</p></div></li>
+      <li><span class="v">15–17</span><div><p class="t">발락이 다시 옵니다</p><p class="d">더 높은 고관들과 "크게 높여 존귀하게 하겠다"는 조건을 들고.</p></div></li>
+      <li><span class="v">18절</span><div><p class="t">입으로는 멋지게</p><p class="d">"은금이 가득한 궁을 준다 해도 하나님의 말씀을 어길 수 없다."</p></div></li>
+      <li class="hot"><span class="v">19절</span><div><p class="t">진짜 마음이 튀어나옴</p><p class="d">"오늘 밤 여기 머물라. 여호와께서 무엇을 더 말씀하실지 알아보겠다."</p></div></li>
+      <li class="hot"><span class="v">20–21</span><div><p class="t">"가라"는 허락, 신나게 출발</p><p class="d">아침 일찍 일어나 자기 손으로 나귀에 안장을 얹고 떠납니다.</p></div></li>
+      <li class="hot"><span class="v">22절</span><div><p class="t">하나님이 진노하십니다</p><p class="d">허락하셨는데 왜? 그 "가라"는 승인이 아니었기 때문입니다.</p></div></li>
+    </ol>
+    <p class="callout">"가라"는 <b>"네 선택이 옳다"는 승인</b>이 아니라, 마음의 방향을 이미 정해 버린 사람을 안타깝게 내버려 두시는 허락이었어요.</p>
+    <p class="quote">"불의의 삯을 사랑하였다"<small>베드로후서 2:15 · 발람은 몰라서 간 게 아니라 사랑해서 갔습니다</small></p>
+    <div class="reroute">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="#F08A3C"></circle><path d="M30 18a9 9 0 1 0 1 7" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"></path><path d="M31 11v8h-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <p><b>우리의 재탐색 버튼</b><br>"하나님, 이거 정말 안 돼요? 딱 한 번만 눈감아 주시면 안 돼요?" 뜻을 구하는 기도가 아니라, 내 욕심에 하나님의 도장을 받아내려는 기도입니다.</p>
+    </div>
+    <p style="font-size:15px">하나님이 당장 막지 않으신다고 괜찮은 게 아닙니다. <b>어떤 때는 그 침묵이 가장 위험한 허락입니다.</b></p>
+  </section>
+
+  <!-- 대지 2 -->
+  <section class="card" aria-labelledby="p2">
+    <div class="point-head">
+      <span class="pin">2</span>
+      <div><h2 id="p2">경고를 방해로 받아들이는 눈</h2><span class="verse-ref">민수기 22:22–35</span></div>
+    </div>
+    <p style="font-size:15px">칼을 빼 든 여호와의 사자가 길을 막아섭니다. 죽음이 코앞인데 선지자 발람은 못 보고, 나귀가 먼저 보고 피합니다.</p>
+    <div class="three" aria-label="점점 강해지는 경고">
+      <div><b>한 번</b><span>밭으로 들어감</span><small>23절</small></div>
+      <div><b>두 번</b><span>담에 몸을 붙임</span><small>25절</small></div>
+      <div><b>세 번</b><span>엎드림</span><small>27절</small></div>
+    </div>
+    <p style="font-size:15px">경고는 점점 강해지는데, 발람은 자기를 살리려고 멈춘 나귀를 채찍으로 때리기 바쁩니다. 결국 나귀의 입이 열려 선지자를 꾸짖습니다. <b>영적 지도자가 짐승보다 둔해진 겁니다.</b></p>
+    <div class="split" aria-label="34절 발람의 고백">
+      <div class="say"><p class="k">34절 · 입으로는</p><p class="q">"내가 범죄하였나이다"</p></div>
+      <div class="but"><p class="k">바로 이어서</p><p class="q">"악하겠거든 돌아가겠나이다"</p></div>
+    </div>
+    <p class="callout">칼 앞에 서 있는데도 <b>'악하다면'</b>이라는 조건을 답니다. 회개하는 척하면서도 가고 싶은 마음은 놓지 못하는 겁니다.</p>
+    <p class="label" style="margin-top:4px">하나님이 울리시는 비상벨</p>
+    <ul class="donkeys">
+      <li>부모님의 쓴소리</li>
+      <li>예배 때 마음이 찔리는 순간</li>
+      <li>갑자기 막히는 일들</li>
+    </ul>
+    <p class="ask">지금 여러분의 나귀는 누구인가요?<br><span class="muted" style="font-size:15px;font-family:var(--font-body);font-weight:500">나를 막아서는 그 사람에게 채찍을 휘두르고 있지는 않나요?</span></p>
+  </section>
+
+  <!-- 대지 3 -->
+  <section class="card" aria-labelledby="p3">
+    <div class="point-head">
+      <span class="pin">3</span>
+      <div><h2 id="p3">도착했지만 끌려온 사람</h2><span class="verse-ref">민수기 22:36–40 · 31:8, 16</span></div>
+    </div>
+    <div class="arrive">
+      <div><b>원하던 곳에 도착</b><span>몸은 그 자리에 있지만</span></div>
+      <div class="x"><b>하고 싶은 대로는 못 함</b><span>"하나님이 입에 주신 말씀만" (38절)</span></div>
+    </div>
+    <p style="font-size:15px">하나님과의 교제는 끊어진 채 끌려다니는 껍데기 신세가 되었습니다. 발람은 끝내 돌이키지 못하고, 이스라엘을 넘어뜨리는 꾀를 내다가 칼에 맞아 죽습니다(민 31:8, 16).</p>
+    <p class="callout">타협의 끝에 남는 것은 <b>승리가 아니라, 망가진 관계</b>입니다.</p>
+  </section>
+
+  <section class="thesis" aria-label="핵심 메시지">
+    <p class="label">핵심 메시지</p>
+    <p class="big">영점이 틀어지는 이유는<br>'몰라서'가 아니라<br><em>'알면서 내 마음이<br>더 끌려서'</em>입니다</p>
+    <p class="sub">인생은 얼마나 열심히, 빠르게 가느냐보다 지금 어디를 향해 가고 있느냐가 훨씬 중요합니다.</p>
+  </section>
+
+  <section class="card" aria-labelledby="way">
+    <p class="label">영점을 다시 맞추러 오라</p>
+    <h2 id="way">필요한 건 더 큰 노력이 아니라 길 되신 분</h2>
+    <div class="vs">
+      <div class="no"><b>더 큰 노력</b><span>내 힘으로 영점 맞추기</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="yes"><b>길 되신 예수님</b><span>그분께 영점을 맞추기</span></div>
+    </div>
+    <div class="love">
+      <div><b>칼 든 사자와 말하는 나귀</b><span>한 영혼이 엉뚱한 길로 가는 것을 그만큼 원치 않으시는 하나님</span></div>
+      <div><b>재탐색 음성만이 아니라</b><span>길 잃은 우리를 직접 찾아오시고, 십자가로 끝까지 되찾으셨습니다</span></div>
+    </div>
+  </section>
+
+  <div class="key-verse">
+    <p class="label">오늘의 중심 말씀</p>
+    <p>"내가 곧 길이요 진리요 생명이니<br>나로 말미암지 않고는<br>아버지께로 올 자가 없느니라"</p>
+    <small>요한복음 14:6 · 함께 읽기: 누가복음 19:10</small>
+  </div>
+
+  <section class="card" aria-labelledby="check">
+    <p class="label">오늘 정직하게 세 가지만</p>
+    <h2 id="check">내 마음의 영점 점검</h2>
+    <div class="checks" role="group" aria-label="영점 점검표">
+      <label class="check" for="c1"><input type="checkbox" id="c1"><div><b>이미 받은 답, 다시 묻고 있지 않나요?</b><span>하나님이 주신 답을 알면서 "이번만"이라며 재탐색하고 있는 것이 있는가?</span></div></label>
+      <label class="check" for="c2"><input type="checkbox" id="c2"><div><b>나의 나귀에게 짜증 내고 있지 않나요?</b><span>부모님, 선생님, 마음의 찔림. 나를 막아서는 경고를 방해로 여기고 있지는 않은가?</span></div></label>
+      <label class="check" for="c3"><input type="checkbox" id="c3"><div><b>내 내비게이션은 누구 목소리인가요?</b><span>지금 내 마음의 기준은 누구의 목소리에 맞춰져 있는가?</span></div></label>
+    </div>
+    <div class="mine">
+      <label for="mine">내가 다시 영점을 맞출 한 가지</label>
+      <input id="mine" type="text" maxlength="80" placeholder="예: 잠들기 전 스마트폰 대신 말씀 한 구절">
+      <small>체크와 적은 내용은 이 기기에만 저장됩니다.</small>
+    </div>
+  </section>
+
+  <section class="blessing" aria-labelledby="bless">
+    <p class="label" id="bless">축복합니다</p>
+    <p>겉모습뿐인 순종과 내 욕심의 내비게이션을 내려놓고, 길 되신 예수님께 영점을 다시 맞추는 은혜가 있기를 바랍니다.</p><p>그 바른 길을 함께 걸어가는 청소년부 공동체가 되기를 주님의 이름으로 축복합니다.</p>
+  </section>
+
+  <div class="tags" aria-label="핵심 키워드">
+    <span>#영점</span><span>#재탐색 버튼</span><span>#발람의 나귀</span><span>#경고는 비상벨</span><span>#불의의 삯</span><span>#길 되신 예수님</span>
+  </div>
+
+  <footer><b>서산중앙성결교회 청소년부</b>영점이 틀어질 때 · 민수기 22:15–40</footer>
+</main>
+
+<script>
+  (function () {
+    var KEY = 'seosan-youth-sermon-2026-10-01';
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { saved = {}; }
+    function save() { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} }
+    ['c1', 'c2', 'c3'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (saved[id]) el.checked = true;
+      el.addEventListener('change', function () { saved[id] = el.checked; save(); });
+    });
+    var mine = document.getElementById('mine');
+    if (saved.mine) mine.value = saved.mine;
+    mine.addEventListener('input', function () { saved.mine = mine.value; save(); });
+  })();
+</script>
+</body>
+</html>
