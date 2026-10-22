@@ -56,6 +56,98 @@
   window.addEventListener('resize', fitAll);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
 
+  // 1-2) 우리들의 이야기: 사진 앨범 (PAGE_DATA.albums)
+  var albumHost = document.querySelector('#panel-story > div');
+  var albums = D.albums || [];
+  function thumbOf(a, f) { return a.folder + '/' + f.replace(/\.jpg$/i, '-thumb.jpg'); }
+  function fullOf(a, f) { return a.folder + '/' + f; }
+  if (albumHost) {
+    if (!albums.length) {
+      albumHost.innerHTML = '<div style="aspect-ratio:4/3;border-radius:16px;background:var(--card);border:1.5px dashed var(--line);display:flex;align-items:center;justify-content:center;padding:16px;text-align:center;color:var(--muted);font-size:15px">첫 사진 앨범을 준비하고 있어요</div>';
+    } else {
+      albumHost.innerHTML = albums.map(function (a, i) {
+        var cover = a.photos && a.photos.length ? thumbOf(a, a.photos[0]) : '';
+        return '<button type="button" data-album="' + i + '" style="all:unset;cursor:pointer;display:block;border-radius:16px;overflow:hidden;background:var(--card);border:1.5px solid var(--line)">' +
+          '<span style="display:block;aspect-ratio:4/3;background:var(--card) url(\'' + esc(cover) + '\') center/cover no-repeat"></span>' +
+          '<span style="display:block;padding:14px 16px 16px">' +
+          '<span style="display:block;font-family:\'Black Han Sans\',sans-serif;font-size:20px;color:#FFFFFF">' + esc(a.title) + '</span>' +
+          '<span style="display:block;margin-top:4px;font-size:14px;color:var(--muted)">' + (a.date ? esc(a.date) + ' · ' : '') + '사진 ' + a.photos.length + '장</span>' +
+          '</span></button>';
+      }).join('');
+      var view = document.createElement('div');
+      view.hidden = true;
+      view.style.cssText = 'margin-top:16px;background:var(--card);border-radius:22px;padding:18px clamp(14px,3vw,24px) 22px';
+      albumHost.parentNode.appendChild(view);
+      var current = null;
+      function openAlbum(i) {
+        if (current === i) { view.hidden = true; current = null; return; }
+        current = i;
+        var a = albums[i];
+        view.innerHTML = '<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px">' +
+          '<span><span style="display:block;font-family:\'Black Han Sans\',sans-serif;font-size:22px;color:#FFFFFF">' + esc(a.title) + '</span>' +
+          '<span style="font-size:14px;color:var(--muted)">' + (a.date ? esc(a.date) + ' · ' : '') + '사진 ' + a.photos.length + '장 · 누르면 크게 보여요</span></span>' +
+          '<button type="button" data-album-close style="flex:none;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:#FFFFFF;font:inherit;font-size:14px;cursor:pointer">닫기</button></div>' +
+          '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(140px,30%),1fr));gap:8px">' +
+          a.photos.map(function (f, k) {
+            return '<button type="button" data-photo="' + k + '" aria-label="사진 ' + (k + 1) + ' 크게 보기" style="all:unset;cursor:pointer;display:block;aspect-ratio:1;border-radius:10px;background:#000 url(\'' + esc(thumbOf(a, f)) + '\') center/cover no-repeat"></button>';
+          }).join('') + '</div>';
+        view.hidden = false;
+      }
+      albumHost.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-album]');
+        if (b) openAlbum(+b.dataset.album);
+      });
+      view.addEventListener('click', function (e) {
+        if (e.target.closest('[data-album-close]')) { view.hidden = true; current = null; return; }
+        var p = e.target.closest('[data-photo]');
+        if (p) showPhoto(albums[current], +p.dataset.photo);
+      });
+
+      // 크게 보기
+      var lb = document.createElement('div');
+      lb.hidden = true;
+      lb.setAttribute('role', 'dialog');
+      lb.setAttribute('aria-label', '사진 크게 보기');
+      lb.style.cssText = 'position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.94);display:flex;align-items:center;justify-content:center';
+      lb.innerHTML = '<img alt="" style="max-width:100%;max-height:100%;object-fit:contain;user-select:none">' +
+        '<button type="button" data-lb="prev" aria-label="이전 사진" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:999px;border:0;background:rgba(255,255,255,.16);color:#fff;font-size:24px;cursor:pointer">‹</button>' +
+        '<button type="button" data-lb="next" aria-label="다음 사진" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:999px;border:0;background:rgba(255,255,255,.16);color:#fff;font-size:24px;cursor:pointer">›</button>' +
+        '<button type="button" data-lb="close" aria-label="닫기" style="position:absolute;right:12px;top:12px;width:48px;height:48px;border-radius:999px;border:0;background:rgba(255,255,255,.16);color:#fff;font-size:22px;cursor:pointer">✕</button>' +
+        '<span data-lb-count style="position:absolute;left:0;right:0;bottom:16px;text-align:center;color:#fff;font-size:14px;font-family:\'IBM Plex Sans KR\',sans-serif"></span>';
+      document.body.appendChild(lb);
+      var lbImg = lb.querySelector('img'), lbCount = lb.querySelector('[data-lb-count]');
+      var lbAlbum = null, lbIndex = 0;
+      function showPhoto(a, k) {
+        lbAlbum = a; lbIndex = (k + a.photos.length) % a.photos.length;
+        lbImg.src = fullOf(a, a.photos[lbIndex]);
+        lbImg.alt = a.title + ' 사진 ' + (lbIndex + 1);
+        lbCount.textContent = (lbIndex + 1) + ' / ' + a.photos.length;
+        lb.hidden = false;
+        document.documentElement.style.overflow = 'hidden';
+      }
+      function closeLb() { lb.hidden = true; lbImg.src = ''; document.documentElement.style.overflow = ''; }
+      lb.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-lb]');
+        if (b && b.dataset.lb === 'prev') showPhoto(lbAlbum, lbIndex - 1);
+        else if (b && b.dataset.lb === 'next') showPhoto(lbAlbum, lbIndex + 1);
+        else if ((b && b.dataset.lb === 'close') || e.target === lb) closeLb();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (lb.hidden) return;
+        if (e.key === 'Escape') closeLb();
+        if (e.key === 'ArrowLeft') showPhoto(lbAlbum, lbIndex - 1);
+        if (e.key === 'ArrowRight') showPhoto(lbAlbum, lbIndex + 1);
+      });
+      var sx = null;
+      lb.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+      lb.addEventListener('touchend', function (e) {
+        if (sx == null) return;
+        var dx = e.changedTouches[0].clientX - sx; sx = null;
+        if (Math.abs(dx) > 50) showPhoto(lbAlbum, lbIndex + (dx < 0 ? 1 : -1));
+      });
+    }
+  }
+
   // 2) 폴더 카드의 개수
   document.querySelectorAll('[data-count]').forEach(function (el) {
     el.textContent = (D[el.dataset.count] || []).length;

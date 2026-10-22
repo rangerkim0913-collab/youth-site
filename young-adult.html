@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&amp;family=IBM+Plex+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet">
 <style>
-:root{--accent:#7FD4FF;--line:#2E4366}
+:root{--accent:#7FD4FF;--line:#2E4366;--card:#1E2E4A;--muted:#94A3BD;--bg:#152238}
 html{scroll-behavior:smooth}
 body{margin:0;background:#152238}
 a{color:#A9E2FF}a:hover{color:#FFFFFF}
@@ -140,7 +140,7 @@ summary{list-style:none}summary::-webkit-details-marker{display:none}
         <span style="font-family: 'Black Han Sans', sans-serif; font-size: 26px; line-height: 1.2; color: #FFFFFF">우리들의 이야기</span>
         <span style="font-size: clamp(13px, 3.8vw, 15px); white-space: nowrap; color: #94A3BD">청년부의 예배·수련회·모임 사진 앨범</span>
         <span style="margin-top: 6px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; width: 100%">
-          <span style="font-size: 14px; color: #94A3BD"><span data-count="photos">0</span>개 앨범</span>
+          <span style="font-size: 14px; color: #94A3BD"><span data-count="albums">0</span>개 앨범</span>
           <span style="font-size: 15px; font-weight: 700; color: #7FD4FF" data-label>열어 보기 ▾</span>
         </span>
       </button>
@@ -171,11 +171,7 @@ summary{list-style:none}summary::-webkit-details-marker{display:none}
 
     <div id="panel-story" data-panel="story" hidden>
       <div style="margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px">
-        <template data-list="photos" data-as="p">
-          <div style="aspect-ratio: 4 / 3; border-radius: 16px; background: #1E2E4A url('{{p.src}}') center / cover no-repeat; border: 1.5px dashed #3A5078; display: flex; align-items: flex-end; padding: 16px; box-sizing: border-box">
-            <span style="font-size: 14px; color: #FFFFFF; background: rgba(0,0,0,.45); padding: 2px 10px; border-radius: 999px">{{p.caption}}</span>
-          </div>
-        </template>
+        
       </div>
     </div>
 
@@ -305,25 +301,8 @@ window.PAGE_DATA = {
       "date": "[00.00]"
     }
   ],
-  // src에 images/폴더의 사진 경로를 넣으면 사진이 보입니다
-  photos: [
-    {
-      "caption": "[예배 사진]",
-      "src": ""
-    },
-    {
-      "caption": "[수련회 사진]",
-      "src": ""
-    },
-    {
-      "caption": "[모임 사진]",
-      "src": ""
-    },
-    {
-      "caption": "[친교 활동 사진]",
-      "src": ""
-    }
-  ],
+  // 우리들의 이야기 앨범: 사진은 folder 안에 01.jpg(큰 사진)와 01-thumb.jpg(작은 사진)로 넣고 photos에 파일 이름을 적습니다. 첫 사진이 표지가 됩니다.
+  albums: [],
   // url에 유튜브 주소를 넣으면 눌렀을 때 영상으로 이동합니다
   videos: [
     {
