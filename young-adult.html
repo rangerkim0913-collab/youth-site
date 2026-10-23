@@ -164,6 +164,9 @@ summary{list-style:none}summary::-webkit-details-marker{display:none}
               <span style="min-width: 0">{{n.title}}<span style="display: block; font-size: 14px; color: #94A3BD">{{n.detail}}</span></span>
             </span>
             <span style="flex: none; color: #94A3BD; font-size: 14px">{{n.date}}</span>
+            <a data-notice-image="{{n.image}}" href="{{n.image}}" target="_blank" rel="noopener" style="flex: 1 1 100%; display: block; max-width: 360px; margin-top: 8px; border-radius: 14px; overflow: hidden; border: 1.5px solid #2E4366">
+              <img src="{{n.thumb}}" alt="{{n.title}} 안내 이미지" loading="lazy" style="display: block; width: 100%; height: auto">
+            </a>
           </div>
         </template>
       </div>
@@ -273,32 +276,13 @@ window.PAGE_DATA = {
   // 공지사항: 일정도 tag를 '일정'으로 해서 여기에 넣습니다.
   notices: [
     {
-      "tag": "모임",
-      "tagColor": "#7FD4FF",
-      "title": "[모임 안내 제목]",
-      "detail": "[한 줄 설명]",
-      "date": "[00.00]"
-    },
-    {
-      "tag": "일정",
-      "tagColor": "#FFB86B",
-      "title": "[청년 수련회]",
-      "detail": "[장소 · 시간]",
-      "date": "[00.00]"
-    },
-    {
-      "tag": "일정",
-      "tagColor": "#FFB86B",
-      "title": "[기도회·집회]",
-      "detail": "[장소 · 시간]",
-      "date": "[00.00]"
-    },
-    {
-      "tag": "안내",
-      "tagColor": "#C9C6BE",
-      "title": "[청년부 공지 제목]",
-      "detail": "[한 줄 설명]",
-      "date": "[00.00]"
+      "tag": "예배",
+      "tagColor": "#D4F36B",
+      "title": "어노인팅 워십 – 삶의 예배",
+      "detail": "10월 24일(토) 오후 5시 30분 · 홍성성결교회 본당\n교회 출발 오후 2시 · 변경 시 추후 연락드립니다. 문의: 김혜성 청년",
+      "date": "10.24",
+      "image": "images/notices/2026-anointing-worship.jpg",
+      "thumb": "images/notices/2026-anointing-worship-thumb.jpg"
     }
   ],
   // 우리들의 이야기 앨범: 사진은 folder 안에 01.jpg(큰 사진)와 01-thumb.jpg(작은 사진)로 넣고 photos에 파일 이름을 적습니다. 첫 사진이 표지가 됩니다.
