@@ -90,7 +90,7 @@
         view.innerHTML = '<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px">' +
           '<span><span style="display:block;font-family:\'Black Han Sans\',sans-serif;font-size:22px;color:#FFFFFF">' + esc(a.title) + '</span>' +
           '<span style="font-size:14px;color:var(--muted)">' + (a.date ? esc(a.date) + ' · ' : '') + '사진 ' + a.photos.length + '장 · 누르면 크게 보여요</span></span>' +
-          '<button type="button" data-album-close style="flex:none;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:#FFFFFF;font:inherit;font-size:14px;cursor:pointer">닫기</button></div>' +
+          '<button type="button" data-album-close style="flex:none;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:inherit;font:inherit;font-size:14px;cursor:pointer">닫기</button></div>' +
           '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(140px,30%),1fr));gap:8px">' +
           a.photos.map(function (f, k) {
             return '<button type="button" data-photo="' + k + '" aria-label="사진 ' + (k + 1) + ' 크게 보기" style="all:unset;cursor:pointer;display:block;aspect-ratio:1;border-radius:10px;background:#000 url(\'' + esc(thumbOf(a, f)) + '\') center/cover no-repeat"></button>';
