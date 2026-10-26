@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<style>:root{color-scheme:light only}</style>
+<title>하나님은 변하지 않으신다 — 민수기 23:13–26 | 서산중앙성결교회</title>
+<meta property="og:title" content="하나님은 변하지 않으신다 · 청소년부 설교">
+<meta property="og:description" content="민수기 23:13–26 · 변하는 세상 속, 신실하신 하나님">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  /* Layout: 10/1 설교 노트와 같은 틀(히어로·대지 카드·핵심 띠·점검표·축복).
+     밝은 크림·하늘 그라데이션 배경에 선명한 파랑(변하지 않으시는 하나님)과 코랄(변하는 것)로 포인트. */
+  :root {
+    --band: #2F6BFF;
+    --band-deep: #161B2E;
+    --band-ink: #F3F5FA;
+    --band-muted: #A9B5CC;
+    --gold: #FFC83D;
+    --signal: #FF7A45;      /* 변하는 것·사람의 계획 */
+    --signal-soft: #FFECE3;
+    --route: #2F6BFF;       /* 변하지 않으시는 하나님 */
+    --route-soft: #E7EEFF;
+    --bg: #FFFCF4;
+    --card: #FFFFFF;
+    --soft: #F3F5FA;
+    --ink: #161B2E;
+    --muted: #586174;
+    --line: #E2E6EF;
+    --font-display: 'Gowun Batang', 'Noto Serif KR', serif;
+    --font-body: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); background: var(--bg); color: var(--ink); font-size: 16px; line-height: 1.75; word-break: keep-all; overflow-wrap: break-word; }
+  h1, h2, h3 { font-family: var(--font-display); line-height: 1.3; text-wrap: balance; }
+  strong { font-weight: 700; }
+
+  .topbar { background: #FFFFFF; border-bottom: 1px solid var(--line); padding: 12px 20px; }
+  .topbar a { color: var(--route); font: 500 14px/1.4 var(--font-body); text-decoration: none; }
+
+  /* Hero */
+  .hero { background: radial-gradient(circle at 12% 18%, #FFE27A 0, rgba(255,226,122,0) 38%), radial-gradient(circle at 88% 26%, #B9D0FF 0, rgba(185,208,255,0) 42%), radial-gradient(circle at 70% 100%, #FFD3BF 0, rgba(255,211,191,0) 40%), linear-gradient(165deg, #FFF7E0 0%, #EEF3FF 100%); color: var(--ink); padding: 52px 20px 48px; text-align: center; position: relative; overflow: hidden; }
+  .hero-in { max-width: 700px; margin: 0 auto; position: relative; }
+  .scope { width: 104px; height: 104px; margin: 0 auto 18px; display: block; }
+  .hero-church { font-size: 12px; letter-spacing: 3px; color: var(--muted); }
+  .hero-series { display: inline-block; margin: 10px 0 18px; border: 1.5px solid var(--route); color: var(--route); background: rgba(255,255,255,.7); font-weight: 700; border-radius: 999px; padding: 3px 16px; font-size: 12px; }
+  .hero-date { font-size: 13px; color: var(--muted); }
+  .hero h1 { font-size: clamp(34px, 8.4vw, 56px); color: var(--ink); margin: 4px 0 10px; }
+  .hero-sub { font-family: var(--font-display); font-size: clamp(17px, 4.4vw, 21px); font-weight: 700; color: var(--route); }
+  .hero-scripture { margin-top: 12px; font-size: 14px; color: var(--muted); }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 28px 20px 48px; display: flex; flex-direction: column; gap: 16px; }
+  .label { font-size: 12px; font-weight: 700; letter-spacing: 2px; color: var(--route); }
+  .card { background: var(--card); border-radius: 16px; padding: 26px 24px; box-shadow: 0 4px 18px rgba(47,107,255,.08); display: flex; flex-direction: column; gap: 14px; }
+  .card h2 { font-size: 23px; }
+  .muted { color: var(--muted); }
+  .verse-ref { font-size: 13px; color: var(--muted); }
+  .txt { font-size: 15px; }
+
+  /* 도입: 단단해 보이지만 변하는 것들 */
+  .solid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .solid div { background: var(--soft); border-radius: 12px; padding: 14px 8px; text-align: center; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .solid b { font-family: var(--font-display); font-size: clamp(15px, 4.2vw, 18px); white-space: nowrap; }
+  .solid span { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .solid small { font-size: 12px; font-weight: 700; color: var(--signal); }
+  .daily { display: flex; flex-wrap: wrap; gap: 8px; }
+  .daily span { font-size: 14px; background: var(--signal-soft); border-radius: 999px; padding: 5px 14px; }
+  .rule { font-family: var(--font-display); font-size: 18px; font-weight: 700; text-align: center; padding-top: 4px; }
+  .rule span { color: var(--route); }
+
+  /* 대지 카드 */
+  .point-head { display: flex; align-items: center; gap: 14px; }
+  .pin { flex: none; width: 46px; height: 46px; border-radius: 50%; background: var(--band); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 22px; font-weight: 700; }
+  .point-head h2 { font-size: 22px; }
+  .point-head .verse-ref { display: block; }
+
+  /* 절 흐름도 */
+  .steps { list-style: none; display: grid; gap: 0; }
+  .steps li { display: grid; grid-template-columns: 58px 1fr; gap: 12px; position: relative; padding: 0 0 14px; }
+  .steps li::before { content: ''; position: absolute; left: 28px; top: 30px; bottom: 0; width: 2px; background: var(--line); }
+  .steps li:last-child { padding-bottom: 0; }
+  .steps li:last-child::before { display: none; }
+  .steps .v { width: 58px; height: 30px; border-radius: 999px; background: var(--soft); color: var(--ink); font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; font-variant-numeric: tabular-nums; }
+  .steps .hot .v { background: var(--signal); color: #fff; }
+  .steps .good .v { background: var(--route); color: #fff; }
+  .steps .t { font-weight: 700; font-size: 15px; }
+  .steps .d { font-size: 15px; color: var(--muted); }
+
+  .callout { background: var(--signal-soft); border-left: 4px solid var(--signal); border-radius: 0 12px 12px 0; padding: 14px 16px; font-size: 15px; }
+  .callout b { color: #B2581C; }
+  .callout.blue { background: var(--route-soft); border-left-color: var(--route); }
+  .callout.blue b { color: var(--route); }
+  .quote { font-family: var(--font-display); font-size: 17px; background: var(--soft); border-radius: 12px; padding: 14px 18px; }
+  .quote small { display: block; margin-top: 4px; font-family: var(--font-body); font-size: 12px; color: var(--muted); }
+
+  /* 사람 vs 하나님 */
+  .split { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+  .split div { border-radius: 12px; padding: 14px 16px; min-width: 0; }
+  .split .man { background: var(--signal-soft); }
+  .split .god { background: var(--route-soft); }
+  .split p.k { font-size: 12px; font-weight: 700; letter-spacing: 1px; color: var(--muted); }
+  .split p.q { font-family: var(--font-display); font-size: 17px; font-weight: 700; }
+  .split p.s { font-size: 14px; color: var(--muted); }
+
+  /* 오해 풀기 */
+  .notmean { list-style: none; display: grid; gap: 8px; }
+  .notmean li { display: grid; grid-template-columns: 22px 1fr; gap: 8px; background: var(--soft); border-radius: 10px; padding: 10px 14px; font-size: 15px; }
+  .notmean li::before { content: '✕'; color: var(--signal); font-weight: 700; }
+  .notmean li.yes::before { content: '✓'; color: var(--route); }
+  .notmean li.yes { background: var(--route-soft); }
+
+  /* 세 가지 길 */
+  .three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .three div { border-radius: 12px; padding: 12px 8px; text-align: center; background: var(--route-soft); }
+  .three b { display: block; font-family: var(--font-display); font-size: 18px; color: var(--route); }
+  .three span { font-size: 13px; }
+
+  /* 왕 비교 */
+  .arrive { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .arrive div { background: var(--soft); border-radius: 12px; padding: 14px; text-align: center; min-width: 0; }
+  .arrive b { display: block; font-size: 15px; }
+  .arrive span { font-size: 14px; color: var(--muted); }
+  .arrive .x b { text-decoration: line-through; text-decoration-color: var(--signal); text-decoration-thickness: 2px; color: var(--muted); }
+  .arrive .o { background: var(--route); color: #fff; }
+  .arrive .o span { color: #DCE6F6; }
+
+  /* 핵심 띠 */
+  .thesis { background: linear-gradient(135deg, #2F6BFF 0%, #6B5BFF 100%); color: #fff; box-shadow: 0 8px 24px rgba(47,107,255,.25); border-radius: 16px; padding: 30px 24px; text-align: center; display: flex; flex-direction: column; gap: 12px; }
+  .thesis .label { color: #FFE27A; }
+  .thesis p.big { font-family: var(--font-display); font-size: clamp(22px, 5.4vw, 30px); font-weight: 700; line-height: 1.45; }
+  .thesis p.big em { font-style: normal; color: #FFE27A; }
+  .thesis .sub { color: #DCE4FF; font-size: 15px; }
+
+  /* 해결: 내 능력만 vs 함께하시는 하나님 */
+  .vs { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: stretch; }
+  .vs > div { border-radius: 14px; padding: 16px 14px; text-align: center; display: flex; flex-direction: column; gap: 4px; justify-content: center; min-width: 0; }
+  .vs .no { background: var(--soft); color: var(--muted); }
+  .vs .no b { text-decoration: line-through; text-decoration-color: var(--signal); text-decoration-thickness: 2px; }
+  .vs .yes { background: var(--route); color: #fff; }
+  .vs .arrow { align-self: center; color: var(--route); font-size: 22px; font-weight: 700; padding: 0; }
+  .vs b { font-family: var(--font-display); font-size: 19px; }
+  .vs span { font-size: 13px; }
+
+  .key-verse { background: var(--card); border: 2px solid var(--route); border-radius: 16px; padding: 24px; text-align: center; }
+  .key-verse .label { margin-bottom: 8px; }
+  .key-verse p { font-family: var(--font-display); font-size: clamp(18px, 4.6vw, 22px); font-weight: 700; line-height: 1.6; }
+  .key-verse small { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; }
+
+  /* 점검표 */
+  .checks { display: grid; gap: 10px; }
+  .check { display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: start; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); cursor: pointer; }
+  .check input { width: 20px; height: 20px; margin-top: 3px; accent-color: var(--route); cursor: pointer; }
+  .check:has(input:checked) { border-color: var(--route); background: var(--route-soft); }
+  .check b { display: block; font-size: 15px; }
+  .check span { font-size: 14px; color: var(--muted); }
+  .check:focus-within { outline: 2px solid var(--route); outline-offset: 2px; }
+  .mine { display: flex; flex-direction: column; gap: 6px; }
+  .mine label { font-size: 14px; font-weight: 700; }
+  .mine input { width: 100%; font: inherit; font-size: 15px; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+  .mine input:focus-visible { outline: 2px solid var(--route); outline-offset: 2px; }
+  .mine small { color: var(--muted); font-size: 12px; }
+
+  .blessing { background: linear-gradient(135deg, #FFF0B8 0%, #FFE0D2 100%); color: var(--ink); border-radius: 16px; padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; }
+  .blessing .label { color: #D9541E; }
+  .blessing p { font-family: var(--font-display); font-size: 17px; line-height: 1.9; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags span { font-size: 13px; padding: 5px 14px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); color: var(--muted); }
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding-top: 20px; border-top: 1px solid var(--line); }
+  footer b { display: block; font-family: var(--font-display); font-size: 16px; color: var(--ink); }
+
+  /* 인포그래픽 저장 (HTML) 버튼 */
+  .dl { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; background: var(--route); color: #fff; box-shadow: 0 6px 16px rgba(47,107,255,.3); font: 700 15px/1 var(--font-body); text-decoration: none; border-radius: 999px; padding: 12px 22px; }
+  .dl svg { width: 18px; height: 18px; }
+  .dl-wrap { text-align: center; }
+  .dl-wrap .dl { margin-top: 0; }
+  .dl-wrap small { display: block; margin-top: 8px; font-size: 12px; color: var(--muted); }
+
+  @media (max-width: 480px) {
+    .card, .thesis, .blessing, .key-verse { padding: 22px 18px; }
+    .vs { grid-template-columns: 1fr; }
+    .vs .arrow { transform: rotate(90deg); justify-self: center; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-in">
+    <svg class="scope" viewBox="0 0 104 104" aria-hidden="true">
+      <!-- 흔들리는 물결 위에 변하지 않는 반석 -->
+      <path d="M6 30c8-6 14-6 22 0s14 6 22 0 14-6 22 0 14 6 22 0" fill="none" stroke="#FF7A45" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 5"></path>
+      <path d="M6 44c8-6 14-6 22 0s14 6 22 0 14-6 22 0 14 6 22 0" fill="none" stroke="#7FA3FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 5"></path>
+      <path d="M18 92 L34 60 L52 52 L70 60 L86 92 Z" fill="#2F6BFF"></path>
+      <path d="M34 60 L52 52 L70 60 L52 70 Z" fill="#7FA3FF"></path>
+      <path d="M10 92h84" stroke="#9AA6C2" stroke-width="2" stroke-linecap="round"></path>
+      <circle cx="52" cy="18" r="5" fill="#FFC83D"></circle>
+    </svg>
+    <div class="hero-church">서산중앙성결교회</div>
+    <div class="hero-series">청소년부 설교</div>
+    <div class="hero-date">2026년 11월 1일</div>
+    <h1>하나님은 변하지 않으신다</h1>
+    <p class="hero-sub">변하는 세상 속, 신실하신 하나님</p>
+    <p class="hero-scripture">민수기 23장 13–26절</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="card" aria-labelledby="intro">
+    <p class="label">들어가며</p>
+    <h2 id="intro">단단해 보이지만 변하는 것들</h2>
+    <p class="txt">변하지 않는 사랑을 약속할 때 다이아몬드 반지를 주고받고, 흔들리지 않는 사람을 반석 같다고 말하죠. 그런데 정말 변하지 않을까요?</p>
+    <div class="solid" aria-label="변하는 것들">
+      <div><b>다이아몬드</b><span>특정 조건에서</span><small>손상될 수 있어요</small></div>
+      <div><b>바위</b><span>오랜 세월의</span><small>풍화와 침식</small></div>
+      <div><b>금</b><span>녹슬지 않아도</span><small>가격은 매일 달라요</small></div>
+    </div>
+    <p class="label" style="margin-top:4px;color:var(--signal)">우리의 일상도</p>
+    <div class="daily"><span>유행이 바뀌고</span><span>사람들의 생각이 달라지고</span><span>학교생활과 친구 관계도 변해요</span></div>
+    <p class="rule">이렇게 변하는 세상 속에서<br>우리는 <span>무엇을 믿고</span> 살아가야 할까요?</p>
+  </section>
+
+  <section class="card" aria-labelledby="flow">
+    <p class="label">본문의 흐름</p>
+    <h2 id="flow">장소를 바꿔도 결과는 축복</h2>
+    <ol class="steps" aria-label="민수기 22–23장 흐름">
+      <li><span class="v">22장</span><div><p class="t">이스라엘이 시혼과 옥을 물리침</p><p class="d">광야를 지나 약속의 땅 가나안으로 향하는 길이었어요.</p></div></li>
+      <li class="hot"><span class="v">22장</span><div><p class="t">모압 왕 발락이 두려워함</p><p class="d">유브라데 강 근처 브돌에서 점술가 발람을 불러 저주를 부탁해요.</p></div></li>
+      <li class="good"><span class="v">1차</span><div><p class="t">첫 번째 시도, 결과는 축복</p><p class="d">하나님께서 발람이 이스라엘을 저주하지 못하게 하셨어요.</p></div></li>
+      <li class="hot"><span class="v">13–14</span><div><p class="t">장소를 바꿔 다시 시도</p><p class="d">진영의 일부만 보이는 소빔 들의 비스가 꼭대기. 다시 일곱 제단을 쌓고 수송아지와 숫양을 바쳐요.</p></div></li>
+      <li class="good"><span class="v">2차</span><div><p class="t">이번에도 저주가 아니라 축복</p><p class="d">발람의 입에서 나온 것은 또다시 축복이었어요.</p></div></li>
+    </ol>
+    <p class="callout blue">사람은 계획을 바꿀 수 있지만, <b>하나님의 뜻을 자기 마음대로 바꿀 수는 없습니다.</b></p>
+  </section>
+
+  <!-- 대지 1 -->
+  <section class="card" aria-labelledby="p1">
+    <div class="point-head">
+      <span class="pin">1</span>
+      <div><h2 id="p1">약속에 신실하신 하나님</h2><span class="verse-ref">민수기 23:19–20 · 고린도후서 1:20</span></div>
+    </div>
+    <p class="quote">"하나님은 사람이 아니시니 거짓말을 하지 않으시고 인생이 아니시니 후회가 없으시도다 어찌 그 말씀하신 바를 행하지 않으시며 하신 말씀을 실행하지 않으시랴"<small>민수기 23:19 · 개역개정</small></p>
+    <div class="split" aria-label="사람과 하나님 비교">
+      <div class="man"><p class="k">사람은</p><p class="q">생각이 달라지고</p><p class="s">약속을 지키지 못하거나, 이익을 위해 말을 바꾸기도 해요.</p></div>
+      <div class="god"><p class="k">하나님은</p><p class="q">말씀과 약속에 신실하세요</p><p class="s">주신 복을 사람 뜻대로 뒤집지 않으세요(20절).</p></div>
+    </div>
+    <p class="callout blue"><b>잠깐, 하나님이 후회하셨다는 구절은?</b> 창세기 6:6, 사무엘상 15:11은 사람의 죄와 불순종 앞에서 마음 아파하시는 모습이에요. 민수기 23:19는 하나님이 사람처럼 거짓말하거나 약속을 깨뜨리지 않으신다는 뜻이라, 서로 모순되지 않아요.</p>
+    <p class="txt">성적이나 친구들의 평가가 우리 삶을 판단하는 <b>유일한 기준이 될 수는 없습니다.</b> 사람들의 생각이 달라져도 하나님의 말씀은 달라지지 않아요.</p>
+    <ul class="notmean" aria-label="신실하심의 뜻">
+      <li>기도하는 모든 일이 원하는 때, 원하는 방식으로 이루어진다는 뜻은 아니에요.</li>
+      <li class="yes">하나님은 자신의 말씀과 약속에 신실하시고, 우리는 그분의 성품을 신뢰할 수 있어요.</li>
+    </ul>
+    <p class="quote">하나님의 약속은 그리스도 안에서 "예"가 됩니다<small>고린도후서 1:20 · 십자가와 부활로 구원의 약속을 이루셨어요</small></p>
+  </section>
+
+  <!-- 대지 2 -->
+  <section class="card" aria-labelledby="p2">
+    <div class="point-head">
+      <span class="pin">2</span>
+      <div><h2 id="p2">함께하시는 하나님</h2><span class="verse-ref">민수기 23:21</span></div>
+    </div>
+    <p class="quote">"여호와는 야곱의 허물을 보지 아니하시며 이스라엘의 반역을 보지 아니하시는도다 여호와 그들의 하나님이 그들과 함께 계시니 왕을 부르는 소리가 그중에 있도다"<small>민수기 23:21 · 개역개정</small></p>
+    <ol class="steps" aria-label="21절 이해하기">
+      <li class="hot"><span class="v">사실</span><div><p class="t">이스라엘은 완벽하지 않았어요</p><p class="d">광야에서 원망하고 불평했고, 말씀을 온전히 신뢰하지 못했어요.</p></div></li>
+      <li class="good"><span class="v">그런데</span><div><p class="t">저주 대신 축복이 선포됩니다</p><p class="d">죄가 없었다는 뜻이 아니라, 하나님이 선포하신 축복을 저주로 바꿀 수 없다는 뜻이에요.</p></div></li>
+      <li class="good"><span class="v">소망</span><div><p class="t">"그들과 함께 계시니"</p><p class="d">더 완벽하거나 강해서가 아니라, 하나님이 함께하셨기 때문이에요.</p></div></li>
+    </ol>
+    <div class="arrive" aria-label="이스라엘의 참된 왕">
+      <div class="x"><b>모압 왕 발락</b><span>저주를 원한 왕</span></div>
+      <div class="o"><b>여호와 하나님</b><span>그들 가운데 계신 참된 왕</span></div>
+    </div>
+    <p class="txt">우리도 은혜가 필요한 사람들입니다. 하나님께 나아가는 이유는 우리가 완벽해서가 아니라, <b>예수 그리스도의 십자가에서 은혜를 베푸시는 분</b>이시기 때문이에요.</p>
+    <ul class="notmean" aria-label="함께하심의 뜻">
+      <li>잘못해도 괜찮다는 뜻이 아니에요. 잘못을 깨달으면 회개하고 돌아가요.</li>
+      <li>모든 어려움이 사라진다는 뜻도 아니에요. 이스라엘도 광야를 지나야 했어요.</li>
+      <li class="yes">우리를 버려두지 않으시고 약속하신 길로 인도하신다는 뜻이에요.</li>
+    </ul>
+    <p class="label" style="margin-top:4px">혼자 해결하려 하지 말고</p>
+    <div class="three" aria-label="하나님의 뜻을 따르는 세 가지 길">
+      <div><b>말씀</b><span>하나님의 뜻을 배우고</span></div>
+      <div><b>기도</b><span>지혜를 구하고</span></div>
+      <div><b>공동체</b><span>믿음의 도움을 받고</span></div>
+    </div>
+  </section>
+
+  <!-- 대지 3 -->
+  <section class="card" aria-labelledby="p3">
+    <div class="point-head">
+      <span class="pin">3</span>
+      <div><h2 id="p3">능력으로 구원하시는 하나님</h2><span class="verse-ref">민수기 23:22–26</span></div>
+    </div>
+    <p class="quote">"하나님이 그들을 애굽에서 인도하여 내셨으니 그의 힘이 들소와 같도다"<small>민수기 23:22 · 개역개정</small></p>
+    <ol class="steps" aria-label="22–26절 흐름">
+      <li class="good"><span class="v">22절</span><div><p class="t">힘의 근원은 하나님</p><p class="d">강력한 바로에게서 이스라엘을 이끌어 내신 분은 하나님이세요. 들소는 고대 세계에서 강한 힘의 상징이었어요.</p></div></li>
+      <li class="good"><span class="v">23절</span><div><p class="t">야곱을 해할 점술이 없다</p><p class="d">점술과 저주로 하나님의 뜻을 뒤집을 수 없어요. 고난이 없다는 뜻은 아니지만, 고난도 하나님의 신실하심을 무효로 만들지 못해요.</p></div></li>
+      <li><span class="v">24절</span><div><p class="t">이스라엘을 사자에 비유</p><p class="d">중심은 이스라엘이 스스로 강하다는 데 있지 않고, 하나님이 인도해 내셨다는 데 있어요.</p></div></li>
+      <li class="hot"><span class="v">25–26</span><div><p class="t">발락은 화를 내고, 발람은 말씀대로</p><p class="d">발락은 끝까지 자기가 원하는 결과만 고집했어요.</p></div></li>
+    </ol>
+    <p class="callout">기도는 <b>하나님을 내 뜻대로 움직이는 방법이 아니라</b>, 하나님의 뜻을 구하고 그 뜻에 순종하는 시간입니다.</p>
+    <div class="vs">
+      <div class="no"><b>내 능력만 의지</b><span>나의 능력에는 한계가 있어요</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="yes"><b>함께하시는 하나님 의지</b><span>성실히 감당하며 하나님을 의지해요</span></div>
+    </div>
+  </section>
+
+  <section class="thesis" aria-label="함께 고백해요">
+    <p class="label">함께 고백해요</p>
+    <p class="big">하나님이 나와 함께하시니<br><em>나의 힘이 들소와 같도다!</em></p>
+    <p class="sub">무엇이든 할 수 있다는 뜻이 아니라, 나를 구원하시고 함께하시는 하나님이 강하시기 때문이라는 믿음의 고백입니다.</p>
+  </section>
+
+  <div class="key-verse">
+    <p class="label">오늘의 중심 말씀</p>
+    <p>"하나님은 사람이 아니시니<br>거짓말을 하지 않으시고<br>인생이 아니시니 후회가 없으시도다"</p>
+    <small>민수기 23:19 · 함께 읽기: 고린도후서 1:20</small>
+  </div>
+
+  <section class="card" aria-labelledby="check">
+    <p class="label">이번 주 세 가지만</p>
+    <h2 id="check">변하지 않는 기준 점검</h2>
+    <div class="checks" role="group" aria-label="이번 주 점검표">
+      <label class="check" for="c1"><input type="checkbox" id="c1"><div><b>내 삶의 기준은 무엇인가요?</b><span>성적이나 친구들의 평가보다 하나님의 말씀을 기준으로 삼고 있는가?</span></div></label>
+      <label class="check" for="c2"><input type="checkbox" id="c2"><div><b>내 기도는 어느 쪽인가요?</b><span>하나님을 내 뜻대로 움직이려 하기보다, 그분의 뜻을 구하고 순종하고 있는가?</span></div></label>
+      <label class="check" for="c3"><input type="checkbox" id="c3"><div><b>혼자 해결하려 하고 있지 않나요?</b><span>말씀으로 배우고, 기도로 지혜를 구하고, 공동체의 도움을 받고 있는가?</span></div></label>
+    </div>
+    <div class="mine">
+      <label for="mine">이번 주 말씀을 기준으로 삼을 한 가지</label>
+      <input id="mine" type="text" maxlength="80" placeholder="예: 선택이 고민될 때 먼저 말씀 한 구절 찾아보기">
+      <small>체크와 적은 내용은 이 기기에만 저장됩니다.</small>
+    </div>
+  </section>
+
+  <section class="blessing" aria-labelledby="bless">
+    <p class="label" id="bless">축복합니다</p>
+    <p>세상은 변해도 하나님은 말씀에 신실하십니다. 변하지 않으시는 하나님을 신뢰하며 말씀을 따라 살아가는 여러분이 되기를 주님의 이름으로 축복합니다.</p>
+  </section>
+
+  <div class="tags" aria-label="핵심 키워드">
+    <span>#변하지 않으시는 하나님</span><span>#약속에 신실하심</span><span>#함께하심</span><span>#들소 같은 힘</span><span>#발락과 발람</span><span>#말씀이 기준</span>
+  </div>
+
+  <footer><b>서산중앙성결교회 청소년부</b>하나님은 변하지 않으신다 · 민수기 23:13–26</footer>
+</main>
+
+<script>
+  (function () {
+    var KEY = 'seosan-youth-sermon-2026-11-01';
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { saved = {}; }
+    function save() { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} }
+    ['c1', 'c2', 'c3'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (saved[id]) el.checked = true;
+      el.addEventListener('change', function () { saved[id] = el.checked; save(); });
+    });
+    var mine = document.getElementById('mine');
+    if (saved.mine) mine.value = saved.mine;
+    mine.addEventListener('input', function () { saved.mine = mine.value; save(); });
+  })();
+</script>
+</body>
+</html>
