@@ -12,6 +12,34 @@
     });
   }
 
+  // 행사 배너: 오늘 날짜가 start~end 안에 있는 첫 번째 배너만 보여 줍니다.
+  (function () {
+    var box = document.getElementById('eventBanner');
+    if (!box || !D.banners) return;
+    var now = new Date(); now.setHours(0, 0, 0, 0);
+    function day(v) { var p = String(v).split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+    var b = null;
+    for (var i = 0; i < D.banners.length; i++) {
+      var x = D.banners[i];
+      if (day(x.start) <= now && now <= day(x.end)) { b = x; break; }
+    }
+    if (!b) return;
+    var left = Math.round((day(b.date || b.end) - now) / 86400000);
+    var dday = left > 0 ? 'D-' + left : (left === 0 ? 'D-DAY' : '');
+    box.innerHTML =
+      '<div style="max-width:1200px;margin:0 auto;padding:4px 24px 0">' +
+      '<a href="' + esc(b.href || '#notice') + '" style="display:flex;align-items:center;gap:14px;padding:14px 18px 14px 14px;border-radius:20px;background:#10131F;color:#FFFFFF;text-decoration:none">' +
+      (dday ? '<span style="flex:none;display:inline-flex;align-items:center;justify-content:center;min-width:64px;height:40px;padding:0 12px;border-radius:999px;background:var(--accent);color:#10131F;font-weight:800;font-size:15px;letter-spacing:-0.01em">' + dday + '</span>' : '') +
+      '<span style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px">' +
+      '<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--accent)">' + esc(b.label || '다가오는 행사') + '</span>' +
+      '<span style="font-weight:800;font-size:17px;letter-spacing:-0.02em;line-height:1.35">' + esc(b.title) + '</span>' +
+      (b.detail ? '<span style="font-size:13px;color:rgba(255,255,255,.72)">' + esc(b.detail) + '</span>' : '') +
+      '</span>' +
+      '<span aria-hidden="true" style="flex:none;font-size:20px;color:var(--accent)">&rarr;</span>' +
+      '</a></div>';
+    box.hidden = false;
+  })();
+
   // 1) <template data-list="…"> 를 목록 데이터로 채우기
   document.querySelectorAll('template[data-list]').forEach(function (t) {
     var list = D[t.dataset.list] || [];

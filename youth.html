@@ -63,6 +63,8 @@ summary{list-style:none}summary::-webkit-details-marker{display:none}
   </div>
   </div>
 
+  <div id="eventBanner" hidden></div>
+
   <section id="top" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 96px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-end">
     <div style="flex: 999 1 560px; min-width: 0">
       <p style="margin: 0 0 20px; font-size: 15px; font-weight: 700; color: #5A780C; letter-spacing: 2px">SEOSAN CENTRAL HOLINESS CHURCH · 청소년부</p>
@@ -292,6 +294,19 @@ window.PAGE_DATA = {
       "href": "sermons/2026-10-01.html"
     }
   ],
+  // 행사 배너: start~end 기간에만 첫 화면 위쪽에 보이고, end 다음 날부터 자동으로 숨겨집니다.
+  // 기간이 겹치지 않게 여러 개를 미리 넣어 두면 차례대로 바뀝니다.
+  banners: [
+    {
+      "label": "다가오는 행사",
+      "title": "2026 친구초청 예배",
+      "detail": "11.15(주일) 오후 2시 · 교육관 3층",
+      "date": "2026-11-15",
+      "start": "2026-10-26",
+      "end": "2026-11-15",
+      "href": "images/notices/2026-friends-party.jpg"
+    }
+  ],
   // 공지사항: 일정도 tag를 '일정'으로 해서 여기에 넣습니다.
   notices: [
     {
@@ -306,7 +321,7 @@ window.PAGE_DATA = {
     {
       "tag": "일정",
       "tagColor": "#FFB86B",
-      "title": "2026 친구초청 잔치",
+      "title": "2026 친구초청 예배",
       "detail": "11월 15일(주일) 오후 2시 · 서산중앙성결교회 교육관 3층\n이날 청소년부 예배는 1부(오전 9시) 예배로 대신합니다. 청소년부 친구들은 1부 예배에 꼭 참석해 주세요!",
       "date": "11.15",
       "image": "images/notices/2026-friends-party.jpg",
