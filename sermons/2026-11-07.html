@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>보물을 찾는 사람</title>
+<meta property="og:title" content="보물을 찾는 사람 · 청년부 설교">
+<meta property="og:description" content="마태복음 13:44–52 · 발견하고, 기쁨으로 결단하고, 말씀으로 자라 가는 사람">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Serif:ital,wght@1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  /* 밝은 보물 톤: 금빛(보물·발견) · 코랄(기쁨의 결단) · 청록(말씀으로 자람) */
+  :root {
+    color-scheme: light only;
+    --bg: #FFFAF0;
+    --surface: #FFFFFF;
+    --soft: #FFF3D6;
+    --line: #EEDFC2;
+    --ink: #17233A;
+    --muted: #55627A;
+    --gold: #F2A516;
+    --gold-ink: #A86400;
+    --coral: #FF6F61;
+    --coral-ink: #C63E31;
+    --coral-soft: #FFE9E5;
+    --teal: #0FA3A3;
+    --teal-ink: #08777A;
+    --teal-soft: #E2F8F5;
+    --violet: #6E56E8;
+    --violet-soft: #EFEBFF;
+    --font-display: 'Gowun Batang', 'Noto Serif KR', serif;
+    --font-body: 'Pretendard Variable', Pretendard, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    --font-greek: 'Noto Serif', 'Times New Roman', serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.75;
+    background:
+      radial-gradient(1100px 560px at 88% -10%, #FFDDA0 0%, rgba(255,221,160,0) 62%),
+      radial-gradient(900px 620px at -12% 28%, #CFF3EE 0%, rgba(207,243,238,0) 60%),
+      radial-gradient(900px 700px at 112% 70%, #FFE0EA 0%, rgba(255,224,234,0) 58%),
+      radial-gradient(900px 600px at 0% 100%, #FFF2B3 0%, rgba(255,242,179,0) 60%),
+      var(--bg);
+    background-attachment: fixed;
+    word-break: keep-all; overflow-wrap: break-word;
+  }
+  .topbar { padding: 12px 20px; background: rgba(255,255,255,.7); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .topbar a { color: var(--teal-ink); font-weight: 600; font-size: 14px; text-decoration: none; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 56px; display: flex; flex-direction: column; gap: 20px; }
+  h1, h2, h3 { font-family: var(--font-display); margin: 0; line-height: 1.3; text-wrap: balance; }
+  p { margin: 0; }
+  .label { font-size: 12px; font-weight: 800; letter-spacing: 2px; color: var(--gold-ink); }
+  .ref { font-size: 13px; color: var(--muted); }
+  .greek { font-family: var(--font-greek); font-style: italic; }
+
+  /* Hero */
+  .hero { max-width: 760px; margin: 0 auto; padding: 48px 16px 8px; display: flex; flex-direction: column; gap: 12px; }
+  .hero h1 { font-size: clamp(36px, 8.4vw, 58px); }
+  .hero h1 em { font-style: normal; color: var(--gold-ink); }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; }
+  .meta span { font-size: 13px; font-weight: 700; padding: 5px 13px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
+  .meta .d { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .hero .lead { color: var(--muted); font-size: 17px; max-width: 34em; }
+  .hero { position: relative; }
+  .motif { display: flex; align-items: center; gap: 16px; margin-top: 10px; }
+  .motif .greek { font-size: clamp(30px, 7vw, 46px); color: transparent; -webkit-text-stroke: 1px var(--gold); letter-spacing: .02em; line-height: 1; }
+  .motif small { flex: none; font-size: 12px; font-weight: 700; color: var(--gold-ink); letter-spacing: 1px; }
+  .motif i { flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold), rgba(242,165,22,0)); }
+
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 10px 30px -22px rgba(150, 100, 10, .45); }
+  .card h2 { font-size: 23px; }
+  blockquote { margin: 0; padding: 14px 18px; background: var(--soft); border-left: 4px solid var(--gold); border-radius: 10px; font-family: var(--font-display); font-size: 17px; }
+  blockquote cite { display: block; margin-top: 6px; font-family: var(--font-body); font-style: normal; font-size: 12px; color: var(--muted); }
+
+  /* 흐름 */
+  .flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .flow div { border-radius: 16px; padding: 16px 10px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .flow div { background: #fff; border: 1px solid var(--line); }
+  .flow .f1 { border-top: 3px solid var(--gold); } .flow .f2 { border-top: 3px solid var(--coral); } .flow .f3 { border-top: 3px solid var(--teal); }
+  .flow svg { width: 34px; height: 34px; }
+  .flow b { font-family: var(--font-display); font-size: 21px; }
+  .flow span { font-size: 12px; color: var(--muted); }
+
+  .story { display: flex; gap: 16px; align-items: center; background: rgba(255,255,255,.85); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; }
+  .story .yr { flex: none; font-family: var(--font-display); font-weight: 700; color: var(--gold-ink); background: transparent; border-right: 1px solid var(--line); border-radius: 0; border-radius: 14px; padding: 8px 12px; text-align: center; line-height: 1.25; font-size: 20px; }
+  .story .yr small { display: block; font-family: var(--font-body); font-size: 11px; font-weight: 600; color: var(--muted); }
+  .story p { font-size: 15px; color: var(--muted); }
+  .story b { color: var(--ink); }
+
+  /* 대지 */
+  .point { position: relative; overflow: hidden; }
+  .point::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; }
+  .p1::before { background: linear-gradient(var(--gold), #FFD36B); }
+  .p2::before { background: linear-gradient(var(--coral), #FFB1A6); }
+  .p3::before { background: linear-gradient(var(--teal), #7FDCD2); }
+  .point .head { display: flex; gap: 12px; align-items: center; }
+  .point .n { flex: none; width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; color: #fff; }
+  .p1 .n { background: var(--gold); } .p2 .n { background: var(--coral); } .p3 .n { background: var(--teal); }
+  .point h2 { font-size: 24px; }
+  .point .vv { font-size: 13px; color: var(--muted); font-weight: 600; }
+
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .pair div { border-radius: 14px; padding: 14px 16px; background: #FFFBF2; border: 1px solid var(--line); }
+  .pair h3 { font-size: 17px; margin-bottom: 4px; }
+  .pair p { font-size: 14.5px; color: var(--muted); }
+  .join { text-align: center; font-weight: 700; background: linear-gradient(90deg, #FFF1C2, #FFE6DF); border-radius: 12px; padding: 12px 14px; font-size: 15.5px; }
+
+  .word { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; background: #1C2A44; color: #fff; border-radius: 14px; padding: 14px 18px; }
+  .word .greek { font-size: 21px; color: #FFD36B; }
+  .word span { font-size: 14.5px; opacity: .95; }
+
+  .trade { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: stretch; }
+  .trade div { text-align: center; border-radius: 14px; padding: 12px; border: 1px solid var(--line); background: #fff; }
+  .trade b { display: block; font-family: var(--font-display); font-size: 23px; }
+  .trade small { font-size: 12.5px; color: var(--muted); }
+  .trade .get b { color: var(--gold-ink); }
+  .trade .arrow { border: 0; background: none; display: flex; align-items: center; color: var(--coral); font-size: 24px; font-weight: 800; padding: 0; }
+  .grace { background: var(--violet-soft); border-radius: 14px; padding: 14px 18px; font-size: 15px; }
+  .grace b { color: var(--violet); }
+
+  .same { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: center; }
+  .same .box { text-align: center; border-radius: 14px; padding: 14px; background: #fff; border: 1px solid var(--line); }
+  .same .box small { display: block; font-size: 12px; font-weight: 800; letter-spacing: 1px; color: var(--teal-ink); }
+  .same .box b { display: block; font-family: var(--font-display); font-size: 23px; }
+  .same .box span { font-size: 13px; color: var(--muted); }
+  .same .mid { text-align: center; color: var(--teal-ink); font-size: 13px; line-height: 1.3; }
+  .same .mid .greek { display: block; font-size: 20px; color: var(--gold-ink); }
+  .fruit { display: flex; flex-wrap: wrap; gap: 6px; }
+  .fruit span { font-size: 13.5px; font-weight: 700; padding: 5px 12px; border-radius: 999px; background: var(--teal-soft); color: var(--teal-ink); }
+
+  /* 핵심 띠 */
+  .sun { text-align: center; border-radius: 24px; padding: 34px 24px; color: #F4EFE4; background: radial-gradient(520px 220px at 50% 0%, rgba(242,165,22,.28), rgba(242,165,22,0) 70%), linear-gradient(160deg, #1C2A44 0%, #13213A 100%); box-shadow: 0 20px 40px -26px rgba(19, 33, 58, .8); }
+  .sun p.big em { font-style: normal; color: #FFC94D; }
+  .sun .label { color: #FFC94D; }
+  .sun p.big { font-family: var(--font-display); font-size: clamp(22px, 5.4vw, 30px); font-weight: 700; line-height: 1.5; margin-top: 8px; }
+  .sun small { display: block; margin-top: 10px; font-size: 14px; opacity: .95; }
+
+  /* 실천 */
+  .picks { display: grid; gap: 10px; }
+  .pick { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--line); background: #FFFCF6; cursor: pointer; }
+  .pick input { margin-top: 5px; width: 18px; height: 18px; accent-color: var(--teal); flex: none; }
+  .pick b { display: block; font-size: 15px; }
+  .pick span { font-size: 14px; color: var(--muted); }
+  .mine label { font-size: 14px; font-weight: 700; }
+  .mine input { width: 100%; font: inherit; font-size: 15px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: #fff; color: var(--ink); margin-top: 4px; }
+  .mine small { color: var(--muted); font-size: 12px; }
+  input:focus-visible, .pick:focus-within, .go:focus-visible { outline: 2px solid var(--teal-ink); outline-offset: 2px; }
+
+  /* 소그룹 */
+  .group .go-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .go { display: flex; flex-direction: column; gap: 2px; padding: 16px 18px; border-radius: 16px; text-decoration: none; color: var(--ink); border: 1.5px solid var(--line); background: #fff; }
+  .go b { font-family: var(--font-display); font-size: 19px; }
+  .go span { font-size: 13.5px; color: var(--muted); }
+  .go.mem { border-color: var(--teal); background: var(--teal-soft); }
+  .go.lead { border-color: var(--violet); background: var(--violet-soft); }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags span { font-size: 13px; padding: 5px 14px; border-radius: 999px; background: #fff; border: 1px solid var(--line); color: var(--muted); }
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding-top: 20px; border-top: 1px solid var(--line); }
+  footer b { display: block; font-family: var(--font-display); font-size: 16px; color: var(--ink); }
+
+  @media (max-width: 520px) {
+    .card, .sun { padding: 20px 18px; }
+    .pair, .group .go-row { grid-template-columns: 1fr; }
+    .story { flex-direction: column; align-items: flex-start; }
+    .same, .trade { grid-template-columns: 1fr; }
+    .trade .arrow { justify-content: center; transform: rotate(90deg); }
+    .flow b { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"><a href="../young-adult.html">← 서산중앙성결교회 청년부</a></div>
+
+<header class="hero">
+  <p class="label">서산중앙성결교회 · 청년부 설교</p>
+  <h1>보물을 찾는 <em>사람</em></h1>
+  <div class="meta"><span class="d">2026.11.07 (토)</span><span>마태복음 13:44–52</span><span>김진웅 목사</span></div>
+  <p class="lead">밭에 감추인 보화, 극히 값진 진주. 예수 그리스도 안에서 하나님 나라라는 보물을 발견한 사람은 기쁨으로 삶을 걸고, 말씀 안에서 보물로 자라 갑니다.</p>
+  <div class="motif"><span class="greek" aria-hidden="true">θησαυρός</span><i></i><small>(테사우로스) 보물 · 보물 창고</small></div>
+</header>
+
+<main class="wrap">
+
+  <section class="card" aria-labelledby="q">
+    <p class="label">오늘의 질문</p>
+    <h2 id="q">여러분은 지금 무엇을 가장 귀하게 여기며 살아가고 있습니까?</h2>
+    <p>학생은 성적과 진로를, 취업을 준비하는 청년은 좋은 직장을, 직장인은 안정과 더 나은 미래를 찾습니다. 우리가 무언가를 찾는 이유는 그것이 가치 있다고 믿기 때문입니다. 이 모든 것은 우리 삶에 필요하고 중요합니다. 그러나 예수님은 <b>반드시 발견해야 할 가장 귀한 보물</b>이 있다고 말씀하십니다.</p>
+    <div class="flow" aria-label="설교의 흐름">
+      <div class="f1"><svg viewBox="0 0 24 24" fill="none" stroke="#A86400" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 18 3-18"/></svg><b>발견</b><span>44–46절</span></div>
+      <div class="f2"><svg viewBox="0 0 24 24" fill="none" stroke="#C63E31" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-5.3-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.7-8 11-8 11z"/></svg><b>결단</b><span>44–46절</span></div>
+      <div class="f3"><svg viewBox="0 0 24 24" fill="none" stroke="#08777A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 13C12 8 8 6 4 6c0 4 2 7 8 7z"/><path d="M12 11c0-4 3-7 8-7 0 5-3 7-8 7z"/></svg><b>성장</b><span>47–52절</span></div>
+    </div>
+  </section>
+
+  <div class="story">
+    <div class="yr">1992<small>영국 서퍽</small></div>
+    <p><b>혹슨 보물 이야기</b> · 농부가 잃어버린 망치를 찾던 에릭 로스의 금속 탐지기가 울렸고, 땅속에서 로마 시대의 금화와 은화, 귀중품이 나왔습니다. <b>망치를 찾으러 갔다가 보물을 만난 것입니다.</b></p>
+  </div>
+
+  <section class="card point p1" aria-labelledby="h1">
+    <div class="head"><span class="n">1</span><div><h2 id="h1">천국은 보물을 찾는 것입니다</h2><span class="vv">44–46절 · 발견</span></div></div>
+    <blockquote>천국은 마치 밭에 감추인 보화와 같으니<cite>마태복음 13:44</cite></blockquote>
+    <div class="pair">
+      <div><h3>밭에서 발견한 사람</h3><p>보물을 찾으려던 사람이 아닙니다. 예상하지 못한 순간에 보화를 발견했습니다.</p></div>
+      <div><h3>진주를 구하는 상인</h3><p>좋은 진주를 찾아다니다가, 마침내 극히 값진 진주 하나를 만났습니다.</p></div>
+    </div>
+    <p class="join">출발점은 달라도 두 사람 모두 <u>자신이 발견한 것이 얼마나 귀한지</u> 알아보았습니다.</p>
+    <p>보물은 밭에 '감추어져' 있었습니다. 겉으로 특별해 보이지 않는 밭이었습니다. 예수님이 오셨을 때도 사람들은 그분을 나사렛의 목수나 훌륭한 선생으로만 보았습니다. 그러나 예수님은 우리를 죄에서 구원하시러 오신 하나님의 아들이십니다.</p>
+    <p>천국은 죽은 뒤에 가는 장소만이 아닙니다. <b>예수 그리스도를 통해 시작되어, 주님 다시 오실 때 완성될 하나님의 다스리심</b>입니다(마 4:17). 그러므로 천국을 발견한다는 것은 예수님이 누구신지 깨닫고, 그분을 나의 구원자와 주님으로 믿는 것입니다.</p>
+  </section>
+
+  <section class="card point p2" aria-labelledby="h2">
+    <div class="head"><span class="n">2</span><div><h2 id="h2">하나님의 보물을 얻는 데에는 결단이 따릅니다</h2><span class="vv">44–46절 · 결단</span></div></div>
+    <p>두 사람은 모두 자기 소유를 다 팔았습니다. 그것이 가진 모든 것보다 더 귀하다는 것을 알았기 때문입니다.</p>
+    <div class="word"><span class="greek">ἀπὸ τῆς χαρᾶς αὐτοῦ</span><span>(아포 테스 카라스 아우투) <b>"그의 기쁨으로 인하여"</b><br>마지못해 판 것이 아니라, 보물을 발견한 기쁨 때문에 팔았습니다.</span></div>
+    <div class="trade" aria-label="내놓는 것보다 얻는 것이 훨씬 귀합니다">
+      <div><b>1,000만 원</b><small>내가 내놓는 것</small></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="get"><b>1억 원의 보물</b><small>내가 얻는 것</small></div>
+    </div>
+    <blockquote>내 주 그리스도 예수를 아는 지식이 가장 고상함이라<cite>빌립보서 3:8 · 바울의 고백</cite></blockquote>
+    <p>주일 예배와 다른 일정이 겹칠 때, 정직하지 않은 방법이 더 쉬워 보일 때, 용서보다 내 감정대로 하고 싶을 때가 있습니다. 하나님 말씀을 따르는 것이 손해처럼 느껴질 때, 예수님은 먼저 <b>보물의 가치</b>를 보여 주십니다. 가치를 알면 선택이 달라집니다.</p>
+    <div class="grace"><b>구원은 거래가 아니라 선물입니다.</b> 은혜에 의하여 믿음으로 받은 구원(엡 2:8–9)에 감사하여 우리는 기쁨으로 순종합니다. 하나님의 은혜는 우리를 구원하실 뿐 아니라 거룩한 삶으로 이끄시는 은혜입니다.</div>
+  </section>
+
+  <section class="card point p3" aria-labelledby="h3">
+    <div class="head"><span class="n">3</span><div><h2 id="h3">보물로 자라 가는 사람</h2><span class="vv">47–52절 · 성장</span></div></div>
+    <p>그물 안에는 여러 물고기가 함께 있었지만, 마지막에는 구별되었습니다(47–50절). 교회에 다니는 것만으로 믿음이 완성되지 않습니다. 중요한 것은 그 믿음이 삶에 어떤 열매를 맺고 있느냐입니다.</p>
+    <blockquote>이 모든 것을 깨달았느냐<cite>마태복음 13:51 · 13:23 "말씀을 듣고 깨닫는 자"가 열매 맺습니다</cite></blockquote>
+    <p>52절의 '제자 된' <span class="greek">μαθητευθείς</span>(마테튜테이스)는 <b>제자로 훈련받은 사람</b>이라는 뜻입니다. 우리는 처음부터 완성된 사람이 아니라, 말씀을 배우며 예수님을 닮아 가는 사람입니다.</p>
+    <div class="same" aria-label="44절 보화와 52절 곳간은 같은 헬라어 단어입니다">
+      <div class="box"><small>44절</small><b>보화</b><span>밭에 감추인 보물</span></div>
+      <div class="mid"><span class="greek">θησαυρός</span>(테사우로스)<br>같은 단어</div>
+      <div class="box"><small>52절</small><b>곳간</b><span>새것과 옛것을 내오는 곳</span></div>
+    </div>
+    <p>본문이 제자를 직접 보물이라 부르지는 않습니다. 그러나 보물을 발견한 사람은 그 말씀을 마음에 간직하고, <b>다른 사람에게도 은혜를 나누는 사람으로 자라 갑니다.</b> 성령께서 말씀으로 우리를 변화시키실 때 우리 삶에 열매가 맺힙니다.</p>
+    <div class="fruit" aria-label="성령의 열매, 갈라디아서 5:22–23"><span>사랑</span><span>희락</span><span>화평</span><span>오래 참음</span><span>자비</span><span>양선</span><span>충성</span><span>온유</span><span>절제</span></div>
+  </section>
+
+  <section class="sun">
+    <p class="label">오늘의 한 문장</p>
+    <p class="big">가장 귀한 보물은<br>예수 그리스도 안에서 주어진 <em>하나님 나라</em>입니다</p>
+    <small>기쁨으로 하나님을 선택하고, 날마다 말씀 안에서 자라 가십시오.</small>
+  </section>
+
+  <section class="card" aria-labelledby="one">
+    <p class="label">이번 주 딱 한 가지</p>
+    <h2 id="one">보물의 가치를 따라 하나를 골라 보세요</h2>
+    <div class="picks" role="group" aria-label="이번 주 실천 고르기">
+      <label class="pick" for="p1"><input type="checkbox" id="p1"><div><b>말씀을 곳간에 쌓기</b><span>매일 성경 한 장을 읽고, 마음에 남은 한 구절을 적어 둡니다.</span></div></label>
+      <label class="pick" for="p2"><input type="checkbox" id="p2"><div><b>예배를 먼저 지키기</b><span>일정이 겹칠 때 예배와 공동체 자리를 먼저 정합니다.</span></div></label>
+      <label class="pick" for="p3"><input type="checkbox" id="p3"><div><b>손해처럼 보여도 정직하기</b><span>학교와 일터에서 쉬운 길 대신 정직을 선택합니다.</span></div></label>
+      <label class="pick" for="p4"><input type="checkbox" id="p4"><div><b>보물 나누기</b><span>힘든 친구에게 내가 붙잡은 말씀 한 구절을 보냅니다.</span></div></label>
+    </div>
+    <div class="mine">
+      <label for="mine">나의 한 가지</label>
+      <input id="mine" type="text" maxlength="80" placeholder="예: 출근길 10분 말씀 묵상하기">
+      <small>적은 내용과 체크는 이 기기에만 저장됩니다.</small>
+    </div>
+  </section>
+
+  <section class="card group" aria-labelledby="sg">
+    <p class="label">소그룹 나눔 · 60분</p>
+    <h2 id="sg">함께 말씀을 나눠요</h2>
+    <p>마음 열기 · 본문 관찰 · 해석 · 적용과 나눔 · 기도와 실천, 다섯 단계로 진행합니다. 인쇄해서 쓰셔도 됩니다.</p>
+    <div class="go-row">
+      <a class="go mem" href="2026-11-07-group.html"><b>청년용 교재 →</b><span>질문과 메모 칸</span></a>
+      <a class="go lead" href="2026-11-07-leader.html"><b>인도자용 교재 →</b><span>진행 순서 · 답 · 인도자 참고</span></a>
+    </div>
+  </section>
+
+  <div class="tags" aria-label="핵심 키워드">
+    <span>#밭에 감추인 보화</span><span>#값진 진주</span><span>#기쁨의 결단</span><span>#은혜의 선물</span><span>#말씀을 깨닫는 자</span><span>#제자 된 서기관</span><span>#보물로 자라 가는 사람</span>
+  </div>
+
+  <footer><b>서산중앙성결교회 청년부</b>보물을 찾는 사람 · 마태복음 13:44–52 · 2026.11.07</footer>
+</main>
+
+<script>
+  (function () {
+    var KEY = 'seosan-ya-sermon-2026-11-07';
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { saved = {}; }
+    function save() { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} }
+    ['p1', 'p2', 'p3', 'p4'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (saved[id]) el.checked = true;
+      el.addEventListener('change', function () { saved[id] = el.checked; save(); });
+    });
+    var mine = document.getElementById('mine');
+    if (saved.mine) mine.value = saved.mine;
+    mine.addEventListener('input', function () { saved.mine = mine.value; save(); });
+  })();
+</script>
+</body>
+</html>
