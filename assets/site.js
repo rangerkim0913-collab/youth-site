@@ -102,7 +102,7 @@
         return '<button type="button" data-album="' + i + '" style="all:unset;cursor:pointer;display:block;border-radius:16px;overflow:hidden;background:var(--card);border:1.5px solid var(--line)">' +
           '<span style="display:block;aspect-ratio:4/3;background:var(--card) url(\'' + esc(cover) + '\') center/cover no-repeat"></span>' +
           '<span style="display:block;padding:14px 16px 16px">' +
-          '<span style="display:block;font-family:var(--font);font-weight:800;letter-spacing:-0.02em;font-size:20px;color:#FFFFFF">' + esc(a.title) + '</span>' +
+          '<span style="display:block;font-family:var(--font);font-weight:800;letter-spacing:-0.02em;font-size:20px;color:#1B1E2B">' + esc(a.title) + '</span>' +
           '<span style="display:block;margin-top:4px;font-size:14px;color:var(--muted)">' + (a.date ? esc(a.date) + ' · ' : '') + '사진 ' + a.photos.length + '장</span>' +
           '</span></button>';
       }).join('');
@@ -116,7 +116,7 @@
         current = i;
         var a = albums[i];
         view.innerHTML = '<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px">' +
-          '<span><span style="display:block;font-family:var(--font);font-weight:800;letter-spacing:-0.02em;font-size:22px;color:#FFFFFF">' + esc(a.title) + '</span>' +
+          '<span><span style="display:block;font-family:var(--font);font-weight:800;letter-spacing:-0.02em;font-size:22px;color:#1B1E2B">' + esc(a.title) + '</span>' +
           '<span style="font-size:14px;color:var(--muted)">' + (a.date ? esc(a.date) + ' · ' : '') + '사진 ' + a.photos.length + '장 · 누르면 크게 보여요</span></span>' +
           '<button type="button" data-album-close style="flex:none;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:inherit;font:inherit;font-size:14px;cursor:pointer">닫기</button></div>' +
           '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(140px,30%),1fr));gap:8px">' +
